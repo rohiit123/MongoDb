@@ -1,0 +1,234 @@
+test> show dbs
+admin   40.00 KiB
+config  12.00 KiB
+local   40.00 KiB
+test> use myDatabase
+switched to db myDatabase
+myDatabase> db.createCollection("movie")
+{ ok: 1 }
+myDatabase> db.movie.insertOne({
+|     "mid":1,
+|     "title":"Dangal",
+|     "director":"Nitish Tiwari",
+|     "genre":["Sports","Drama"],
+|     "ratings":8.3,
+|     "year":2016
+|
+|       })
+{
+  acknowledged: true,
+  insertedId: ObjectId('6aa2c0039c2e54e203144bf7')
+}
+myDatabase> db.movie.insertOne({
+|     "mid":2,
+|     "title":"3 iditos",
+|     "director":"Rajkumar Hirani",
+|     "genre":["Comady","Drama"],
+|     "ratings":8.4,
+|     "year":2009
+|
+|       })
+{
+  acknowledged: true,
+  insertedId: ObjectId('6aa2c0809c2e54e203144bf8')
+}
+myDatabase> db.movie.insertOne({
+|     "mid":3,
+|     "title":"Lagaan",
+|     "director":"Ashutosh Gowarikar",
+|     "genre":["Sports","Drama","Romance"],
+|     "ratings":8.1,
+|     "year":2001
+|
+|       })
+{
+  acknowledged: true,
+  insertedId: ObjectId('6aa2c0d69c2e54e203144bf9')
+}
+myDatabase> db.movie.insertOne({
+|     "mid":4,
+|     "title":"Sholay",
+|     "director":"Ramesh Sippy",
+|     "genre":["Action","comady",],
+|     "ratings":8.2,
+|     "year":1975
+|
+|       })
+{
+  acknowledged: true,
+  insertedId: ObjectId('6aa2c1329c2e54e203144bfa')
+}
+myDatabase> db.movie.insertOne({
+|     "mid":5,
+|     "title":"Ra One",
+|     "director":"Rubhav sinha",
+|     "genre":["Action","Sci-Fi"],
+|     "ratings":4.9,
+|     "year":2011
+|
+|       })
+{
+  acknowledged: true,
+  insertedId: ObjectId('6aa2c1879c2e54e203144bfb')
+}
+myDatabase> db.movie.find()
+[
+  {
+    _id: ObjectId('6aa2c0039c2e54e203144bf7'),
+    mid: 1,
+    title: 'Dangal',
+    director: 'Nitish Tiwari',
+    genre: [ 'Sports', 'Drama' ],
+    ratings: 8.3,
+    year: 2016
+  },
+  {
+    _id: ObjectId('6aa2c0809c2e54e203144bf8'),
+    mid: 2,
+    title: '3 iditos',
+    director: 'Rajkumar Hirani',
+    genre: [ 'Comady', 'Drama' ],
+    ratings: 8.4,
+    year: 2009
+  },
+  {
+    _id: ObjectId('6aa2c0d69c2e54e203144bf9'),
+    mid: 3,
+    title: 'Lagaan',
+    director: 'Ashutosh Gowarikar',
+    genre: [ 'Sports', 'Drama', 'Romance' ],
+    ratings: 8.1,
+    year: 2001
+  },
+  {
+    _id: ObjectId('6aa2c1329c2e54e203144bfa'),
+    mid: 4,
+    title: 'Sholay',
+    director: 'Ramesh Sippy',
+    genre: [ 'Action', 'comady' ],
+    ratings: 8.2,
+    year: 1975
+  },
+  {
+    _id: ObjectId('6aa2c1879c2e54e203144bfb'),
+    mid: 5,
+    title: 'Ra One',
+    director: 'Rubhav sinha',
+    genre: [ 'Action', 'Sci-Fi' ],
+    ratings: 4.9,
+    year: 2011
+  }
+]
+myDatabase> db.students.find().pretty()
+
+myDatabase> db.movie.find().pretty()
+[
+  {
+    _id: ObjectId('6aa2c0039c2e54e203144bf7'),
+    mid: 1,
+    title: 'Dangal',
+    director: 'Nitish Tiwari',
+    genre: [ 'Sports', 'Drama' ],
+    ratings: 8.3,
+    year: 2016
+  },
+  {
+    _id: ObjectId('6aa2c0809c2e54e203144bf8'),
+    mid: 2,
+    title: '3 iditos',
+    director: 'Rajkumar Hirani',
+    genre: [ 'Comady', 'Drama' ],
+    ratings: 8.4,
+    year: 2009
+  },
+  {
+    _id: ObjectId('6aa2c0d69c2e54e203144bf9'),
+    mid: 3,
+    title: 'Lagaan',
+    director: 'Ashutosh Gowarikar',
+    genre: [ 'Sports', 'Drama', 'Romance' ],
+    ratings: 8.1,
+    year: 2001
+  },
+  {
+    _id: ObjectId('6aa2c1329c2e54e203144bfa'),
+    mid: 4,
+    title: 'Sholay',
+    director: 'Ramesh Sippy',
+    genre: [ 'Action', 'comady' ],
+    ratings: 8.2,
+    year: 1975
+  },
+  {
+    _id: ObjectId('6aa2c1879c2e54e203144bfb'),
+    mid: 5,
+    title: 'Ra One',
+    director: 'Rubhav sinha',
+    genre: [ 'Action', 'Sci-Fi' ],
+    ratings: 4.9,
+    year: 2011
+  }
+]
+myDatabase> db.movie.find({ ratings: 8.2 })
+[
+  {
+    _id: ObjectId('6aa2c1329c2e54e203144bfa'),
+    mid: 4,
+    title: 'Sholay',
+    director: 'Ramesh Sippy',
+    genre: [ 'Action', 'comady' ],
+    ratings: 8.2,
+    year: 1975
+  }
+]
+myDatabase> db.movie.deleteOne({ ratings: 8.2 })
+{ acknowledged: true, deletedCount: 1 }
+myDatabase> db.movie.find({ ratings: 8.2 })
+
+myDatabase> db.movie.find().pretty()
+[
+  {
+    _id: ObjectId('6aa2c0039c2e54e203144bf7'),
+    mid: 1,
+    title: 'Dangal',
+    director: 'Nitish Tiwari',
+    genre: [ 'Sports', 'Drama' ],
+    ratings: 8.3,
+    year: 2016
+  },
+  {
+    _id: ObjectId('6aa2c0809c2e54e203144bf8'),
+    mid: 2,
+    title: '3 iditos',
+    director: 'Rajkumar Hirani',
+    genre: [ 'Comady', 'Drama' ],
+    ratings: 8.4,
+    year: 2009
+  },
+  {
+    _id: ObjectId('6aa2c0d69c2e54e203144bf9'),
+    mid: 3,
+    title: 'Lagaan',
+    director: 'Ashutosh Gowarikar',
+    genre: [ 'Sports', 'Drama', 'Romance' ],
+    ratings: 8.1,
+    year: 2001
+  },
+  {
+    _id: ObjectId('6aa2c1879c2e54e203144bfb'),
+    mid: 5,
+    title: 'Ra One',
+    director: 'Rubhav sinha',
+    genre: [ 'Action', 'Sci-Fi' ],
+    ratings: 4.9,
+    year: 2011
+  }
+]
+myDatabase> show dbs
+admin       40.00 KiB
+config      92.00 KiB
+local       40.00 KiB
+myDatabase  72.00 KiB
+myDatabase> show collections
+movie
+myDatabase>
