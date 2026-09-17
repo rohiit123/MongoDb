@@ -1,0 +1,422 @@
+db.createCollection("campusEvents")
+
+
+db.campusEvents.insertMany([
+{
+	"eventId":"CE101",
+	"eventName":"Tech Fest",
+	"department":"Computer Science",
+	"venue":"Main Auditorium",
+	"participants":250,
+	"budget":50000,
+	"eventDate":"2026-09-15",
+	"status":"Completed"
+},
+{
+	"eventId":"CE102",
+	"eventName":"Cultural Night",
+	"department":"Arts",
+	"venue":"Open Air Theatre",
+	"participants":400,
+	"budget":75000,
+	"eventDate":"2026-09-18",
+	"status":"Upcomming"
+},
+{
+	"eventId":"CE103",
+	"eventName":"Sports Meet",
+	"department":"Physical Education",
+	"venue":"University Ground",
+	"participants":300,
+	"budget":60000,
+	"eventDate":"2026-09-20",
+	"status":"Upcoming"
+},
+{
+	"eventId":"CE104",
+	"eventName":"Robotics Workshop",
+	"department":"Information Technology",
+	"venue":"Lab 3",
+	"participants":80,
+	"budget":25000,
+	"eventDate":"2026-09-12",
+	"status":"Completed"
+},
+{
+	"eventId":"CE105",
+	"eventName":"Entrepreneurship Seminar",
+	"department":"Management",
+	"venue":"Seminar Hall",
+	"participants":150,
+	"budget":35000,
+	"eventDate":"2026-09-22",
+	"status":"Upcoming"
+},
+{
+	"eventId":"CE106",
+	"eventName":"Coding Competation",
+	"department":"Computer Science",
+	"venue":"Computer Lab",
+	"participants":120,
+	"budget":20000,
+	"eventDate":"2026-09-25",
+	"status":"Upcoming"
+},
+{
+	"eventId":"CE107",
+	"eventName":"Photography Exhibition",
+	"department":"Arts",
+	"venue":"Exhibition Hall",
+	"participants":180,
+	"budget":30000,
+	"eventDate":"2026-09-10",
+	"status":"Completed"
+},
+{
+	"eventId":"CE108",
+	"eventName":"Ai Awareness Seminar",
+	"department":"Information Technology",
+	"venue":"Main Auditorium",
+	"participants":220,
+	"budget":45000,
+	"eventDate":"2026-09-28",
+	"status":"Upcoming"
+}
+
+])
+
+1.Display all events whose eventName ends with the letter 't'.
+
+myDatabase> db.campusEvents.find({eventName:{$regex:"t$",$options:"i"}})
+[
+  {
+    _id: ObjectId('6aabf2e511131e0f387e9016'),
+    eventId: 'CE101',
+    eventName: 'Tech Fest',
+    department: 'Computer Science',
+    venue: 'Main Auditorium',
+    participants: 250,
+    budget: 50000,
+    eventDate: '2026-09-15',
+    status: 'Completed'
+  },
+  {
+    _id: ObjectId('6aabf2e511131e0f387e9017'),
+    eventId: 'CE102',
+    eventName: 'Cultural Night',
+    department: 'Arts',
+    venue: 'Open Air Theatre',
+    participants: 400,
+    budget: 75000,
+    eventDate: '2026-09-18',
+    status: 'Upcomming'
+  },
+  {
+    _id: ObjectId('6aabf2e511131e0f387e9018'),
+    eventId: 'CE103',
+    eventName: 'Sports Meet',
+    department: 'Physical Education',
+    venue: 'University Ground',
+    participants: 300,
+    budget: 60000,
+    eventDate: '2026-09-20',
+    status: 'Upcoming'
+  }
+]
+
+
+2.Display all events whose eventName starts with the letter 'A'.
+
+myDatabase> db.campusEvents.find({eventName:{$regex:"^a",$options:"i"}})
+[
+  {
+    _id: ObjectId('6aabf2e511131e0f387e901d'),
+    eventId: 'CE108',
+    eventName: 'Ai Awareness Seminar',
+    department: 'Information Technology',
+    venue: 'Main Auditorium',
+    participants: 220,
+    budget: 45000,
+    eventDate: '2026-09-28',
+    status: 'Upcoming'
+  }
+]
+
+3.Display all events whose eventName contains the word "sports".
+
+myDatabase> db.campusEvents.find({eventName:{$regex:"Sports",$options:"i"}})
+[
+  {
+    _id: ObjectId('6aabf2e511131e0f387e9018'),
+    eventId: 'CE103',
+    eventName: 'Sports Meet',
+    department: 'Physical Education',
+    venue: 'University Ground',
+    participants: 300,
+    budget: 60000,
+    eventDate: '2026-09-20',
+    status: 'Upcoming'
+  }
+]
+
+4.Display all events whose eventName starts with 'p' and ends with 'n'
+
+myDatabase> db.campusEvents.find({eventName:{$regex:"^p.*n$",$options:"i"}})
+[
+  {
+    _id: ObjectId('6aabf2e511131e0f387e901c'),
+    eventId: 'CE107',
+    eventName: 'Photography Exhibition',
+    department: 'Arts',
+    venue: 'Exhibition Hall',
+    participants: 180,
+    budget: 30000,
+    eventDate: '2026-09-10',
+    status: 'Completed'
+  }
+]
+
+5.Display all events whose department name contains exactly 4 characters.
+
+myDatabase> db.campusEvents.find({department:{$regex:"^.{4}$"}})
+[
+  {
+    _id: ObjectId('6aabf2e511131e0f387e9017'),
+    eventId: 'CE102',
+    eventName: 'Cultural Night',
+    department: 'Arts',
+    venue: 'Open Air Theatre',
+    participants: 400,
+    budget: 75000,
+    eventDate: '2026-09-18',
+    status: 'Upcomming'
+  },
+  {
+    _id: ObjectId('6aabf2e511131e0f387e901c'),
+    eventId: 'CE107',
+    eventName: 'Photography Exhibition',
+    department: 'Arts',
+    venue: 'Exhibition Hall',
+    participants: 180,
+    budget: 30000,
+    eventDate: '2026-09-10',
+    status: 'Completed'
+  }
+]
+
+6.Display all events whose eventName contains the word 'seminar' irrespective of uppercase or lowercase letters.
+
+myDatabase> db.campusEvents.find({eventName:{$regex:"seminar",$options:"i"}})
+[
+  {
+    _id: ObjectId('6aabf2e511131e0f387e901a'),
+    eventId: 'CE105',
+    eventName: 'Entrepreneurship Seminar',
+    department: 'Management',
+    venue: 'Seminar Hall',
+    participants: 150,
+    budget: 35000,
+    eventDate: '2026-09-22',
+    status: 'Upcoming'
+  },
+  {
+    _id: ObjectId('6aabf2e511131e0f387e901d'),
+    eventId: 'CE108',
+    eventName: 'Ai Awareness Seminar',
+    department: 'Information Technology',
+    venue: 'Main Auditorium',
+    participants: 220,
+    budget: 45000,
+    eventDate: '2026-09-28',
+    status: 'Upcoming'
+  }
+]
+
+
+
+7.Display all events whose department name contains exactly 22 characters,irrespective of uppercase or lowercase letters.
+
+myDatabase> db.campusEvents.find({department:{$regex:"^.{22}$",$options:"i"}})
+[
+  {
+    _id: ObjectId('6aabf2e511131e0f387e9019'),
+    eventId: 'CE104',
+    eventName: 'Robotics Workshop',
+    department: 'Information Technology',
+    venue: 'Lab 3',
+    participants: 80,
+    budget: 25000,
+    eventDate: '2026-09-12',
+    status: 'Completed'
+  },
+  {
+    _id: ObjectId('6aabf2e511131e0f387e901d'),
+    eventId: 'CE108',
+    eventName: 'Ai Awareness Seminar',
+    department: 'Information Technology',
+    venue: 'Main Auditorium',
+    participants: 220,
+    budget: 45000,
+    eventDate: '2026-09-28',
+    status: 'Upcoming'
+  }
+]
+
+8.Display all events whose eventName contains the word 'tech' irrespective of its case.
+
+myDatabase> db.campusEvents.find({eventName:{$regex:"tech",$options:"i"}})
+[
+  {
+    _id: ObjectId('6aabf2e511131e0f387e9016'),
+    eventId: 'CE101',
+    eventName: 'Tech Fest',
+    department: 'Computer Science',
+    venue: 'Main Auditorium',
+    participants: 250,
+    budget: 50000,
+    eventDate: '2026-09-15',
+    status: 'Completed'
+  }
+]
+
+9.Display all events whose venue name starts whith the letter 'C'.
+
+myDatabase> db.campusEvents.find({venue:{$regex:"^c",$options:"i"}})
+[
+  {
+    _id: ObjectId('6aabf2e511131e0f387e901b'),
+    eventId: 'CE106',
+    eventName: 'Coding Competation',
+    department: 'Computer Science',
+    venue: 'Computer Lab',
+    participants: 120,
+    budget: 20000,
+    eventDate: '2026-09-25',
+    status: 'Upcoming'
+  }
+]
+
+
+10.Display all events whose department name ends with the letters 's'.
+
+myDatabase> db.campusEvents.find({department:{$regex:"s$",$options:"i"}})
+[
+  {
+    _id: ObjectId('6aabf2e511131e0f387e9017'),
+    eventId: 'CE102',
+    eventName: 'Cultural Night',
+    department: 'Arts',
+    venue: 'Open Air Theatre',
+    participants: 400,
+    budget: 75000,
+    eventDate: '2026-09-18',
+    status: 'Upcomming'
+  },
+  {
+    _id: ObjectId('6aabf2e511131e0f387e901c'),
+    eventId: 'CE107',
+    eventName: 'Photography Exhibition',
+    department: 'Arts',
+    venue: 'Exhibition Hall',
+    participants: 180,
+    budget: 30000,
+    eventDate: '2026-09-10',
+    status: 'Completed'
+  }
+]
+
+11.Display all events whose venue name contains the word 'hall', irrespective of cases.
+
+myDatabase> db.campusEvents.find({venue:{$regex:"hall",$options:"i"}})
+[
+  {
+    _id: ObjectId('6aabf2e511131e0f387e901a'),
+    eventId: 'CE105',
+    eventName: 'Entrepreneurship Seminar',
+    department: 'Management',
+    venue: 'Seminar Hall',
+    participants: 150,
+    budget: 35000,
+    eventDate: '2026-09-22',
+    status: 'Upcoming'
+  },
+  {
+    _id: ObjectId('6aabf2e511131e0f387e901c'),
+    eventId: 'CE107',
+    eventName: 'Photography Exhibition',
+    department: 'Arts',
+    venue: 'Exhibition Hall',
+    participants: 180,
+    budget: 30000,
+    eventDate: '2026-09-10',
+    status: 'Completed'
+  }
+]
+
+12.Display all events whose eventName starts with 'c' and has the letter 'o' after the first character.
+
+myDatabase> db.campusEvents.find({eventName:{$regex:"^c.*o",$options:"i"}})
+[
+  {
+    _id: ObjectId('6aabf2e511131e0f387e901b'),
+    eventId: 'CE106',
+    eventName: 'Coding Competation',
+    department: 'Computer Science',
+    venue: 'Computer Lab',
+    participants: 120,
+    budget: 20000,
+    eventDate: '2026-09-25',
+    status: 'Upcoming'
+  }
+]
+
+13.Display all events whose eventName has exactly 18 characters.
+
+myDatabase> db.campusEvents.find({eventName:{$regex:"^.{18}$",$options:"i"}})
+[
+  {
+    _id: ObjectId('6aabf2e511131e0f387e901b'),
+    eventId: 'CE106',
+    eventName: 'Coding Competation',
+    department: 'Computer Science',
+    venue: 'Computer Lab',
+    participants: 120,
+    budget: 20000,
+    eventDate: '2026-09-25',
+    status: 'Upcoming'
+  }
+]
+
+14.Display all events whose eventName starts with 'e' followed by exactly 23 characters.
+
+myDatabase> db.campusEvents.find({eventName:{$regex:"^e.{23}$",$options:"i"}})
+[
+  {
+    _id: ObjectId('6aabf2e511131e0f387e901a'),
+    eventId: 'CE105',
+    eventName: 'Entrepreneurship Seminar',
+    department: 'Management',
+    venue: 'Seminar Hall',
+    participants: 150,
+    budget: 35000,
+    eventDate: '2026-09-22',
+    status: 'Upcoming'
+  }
+]
+
+15.Display all events whose eventName contains the word 'Ai' irrespective of cases.
+
+myDatabase> db.campusEvents.find({eventName:{$regex:"^ai",$options:"i"}})
+[
+  {
+    _id: ObjectId('6aabf2e511131e0f387e901d'),
+    eventId: 'CE108',
+    eventName: 'Ai Awareness Seminar',
+    department: 'Information Technology',
+    venue: 'Main Auditorium',
+    participants: 220,
+    budget: 45000,
+    eventDate: '2026-09-28',
+    status: 'Upcoming'
+  }
+]
