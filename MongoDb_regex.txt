@@ -1,0 +1,1140 @@
+
+test> show dbs
+Flightdb    104.00 KiB
+admin        40.00 KiB
+config       36.00 KiB
+local        88.00 KiB
+myDatabase  176.00 KiB
+test> use myDatabase
+switched to db myDatabase
+myDatabase> show collections
+campusEvents
+movie
+travelPackages
+myDatabase> db.travelPackages.find()
+[
+  {
+    _id: ObjectId('6ab681968d5fbb0666149836'),
+    id: 'TP101',
+    package: 'Goa Explorer',
+    operated: 'TravelWorld',
+    destination: [ 'Goa', 'Panaji', 'Calangute' ],
+    activities: [ 'Beach', 'Water Sports', 'Sightseeing' ],
+    duration: 5,
+    price: 18000,
+    rating: 4.5
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb0666149837'),
+    id: 'TP102',
+    package: 'Himalayan Adventure',
+    operated: 'Mountain Trails',
+    destination: [ 'Manali', 'Solang Valley', 'Rohtang' ],
+    activities: [ 'Trekking', 'Camping', 'Snow Adventure' ],
+    duration: 7,
+    price: 25000,
+    rating: 4.8
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb0666149838'),
+    id: 'TP103',
+    package: 'Rajasthan Heritage',
+    operated: 'Royal Travels',
+    destination: [ 'Jaipur', 'Jodhpur', 'Udaipur' ],
+    activities: [ 'Fort Visit', 'Desert Safari', 'Cultural Show' ],
+    duration: 6,
+    price: 22000,
+    rating: 4.6
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb0666149839'),
+    id: 'TP104',
+    package: 'Kerala Retreat',
+    operated: 'Green Hours',
+    destination: [ 'Kochi', 'Munnar', 'Alleppey' ],
+    activities: [ 'Houseboat', 'Tea Garden', 'Nature Walk' ],
+    duration: 5,
+    price: 20000,
+    rating: 4.7
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb066614983a'),
+    id: 'TP105',
+    package: 'Delhi City Tour',
+    operated: 'Urban Trips',
+    destination: [ 'Delhi', 'Agra', 'Mathura' ],
+    activities: [ 'Monument Visit', 'Shopping', 'Food Tour' ],
+    duration: 4,
+    price: 14000,
+    rating: 4.2
+  },
+  {
+    _id: ObjectId('6ab682088d5fbb066614983b'),
+    id: 'TP106',
+    package: 'Kashmir Escape',
+    operated: 'Snow Trails',
+    destination: [ 'Srinagar', 'Gulmarg' ],
+    activities: [ 'Skiing', 'Sightseeing' ],
+    duration: 6,
+    price: 27000,
+    rating: 4.9
+  },
+  {
+    _id: ObjectId('6ab684bf8d5fbb066614983c'),
+    packageId: 'TP107',
+    packageName: 'Coorg Nature',
+    operator: 'Nature Travels',
+    destinations: [ 'Coorg' ],
+    activities: [ 'Nature Walk', 'Sightseeing' ],
+    duration: 3,
+    price: 16000,
+    rating: 4.4
+  },
+  {
+    _id: ObjectId('6ab684bf8d5fbb066614983d'),
+    packageId: 'TP108',
+    packageName: 'Agra Weekend',
+    operator: 'Weekend Travels',
+    destinations: [ 'Agra' ],
+    activities: [ 'Monument Visit', 'Sightseeing' ],
+    duration: 2,
+    price: 12000,
+    rating: 4.3
+  }
+]
+
+3. Change the price of TP105 to ₹15000.
+
+myDatabase> db.travelPackages.updateOne( { id: "TP105" }, { $set: { price: 15000 } })
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+myDatabase> db.travelPackages.find()
+[
+  {
+    _id: ObjectId('6ab681968d5fbb0666149836'),
+    id: 'TP101',
+    package: 'Goa Explorer',
+    operated: 'TravelWorld',
+    destination: [ 'Goa', 'Panaji', 'Calangute' ],
+    activities: [ 'Beach', 'Water Sports', 'Sightseeing' ],
+    duration: 5,
+    price: 18000,
+    rating: 4.5
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb0666149837'),
+    id: 'TP102',
+    package: 'Himalayan Adventure',
+    operated: 'Mountain Trails',
+    destination: [ 'Manali', 'Solang Valley', 'Rohtang' ],
+    activities: [ 'Trekking', 'Camping', 'Snow Adventure' ],
+    duration: 7,
+    price: 25000,
+    rating: 4.8
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb0666149838'),
+    id: 'TP103',
+    package: 'Rajasthan Heritage',
+    operated: 'Royal Travels',
+    destination: [ 'Jaipur', 'Jodhpur', 'Udaipur' ],
+    activities: [ 'Fort Visit', 'Desert Safari', 'Cultural Show' ],
+    duration: 6,
+    price: 22000,
+    rating: 4.6
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb0666149839'),
+    id: 'TP104',
+    package: 'Kerala Retreat',
+    operated: 'Green Hours',
+    destination: [ 'Kochi', 'Munnar', 'Alleppey' ],
+    activities: [ 'Houseboat', 'Tea Garden', 'Nature Walk' ],
+    duration: 5,
+    price: 20000,
+    rating: 4.7
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb066614983a'),
+    id: 'TP105',
+    package: 'Delhi City Tour',
+    operated: 'Urban Trips',
+    destination: [ 'Delhi', 'Agra', 'Mathura' ],
+    activities: [ 'Monument Visit', 'Shopping', 'Food Tour' ],
+    duration: 4,
+    price: 15000,
+    rating: 4.2
+  },
+  {
+    _id: ObjectId('6ab682088d5fbb066614983b'),
+    id: 'TP106',
+    package: 'Kashmir Escape',
+    operated: 'Snow Trails',
+    destination: [ 'Srinagar', 'Gulmarg' ],
+    activities: [ 'Skiing', 'Sightseeing' ],
+    duration: 6,
+    price: 27000,
+    rating: 4.9
+  },
+  {
+    _id: ObjectId('6ab684bf8d5fbb066614983c'),
+    packageId: 'TP107',
+    packageName: 'Coorg Nature',
+    operator: 'Nature Travels',
+    destinations: [ 'Coorg' ],
+    activities: [ 'Nature Walk', 'Sightseeing' ],
+    duration: 3,
+    price: 16000,
+    rating: 4.4
+  },
+  {
+    _id: ObjectId('6ab684bf8d5fbb066614983d'),
+    packageId: 'TP108',
+    packageName: 'Agra Weekend',
+    operator: 'Weekend Travels',
+    destinations: [ 'Agra' ],
+    activities: [ 'Monument Visit', 'Sightseeing' ],
+    duration: 2,
+    price: 12000,
+    rating: 4.3
+  }
+]
+
+
+4. Increase the price by ₹1000 for all packages having duration less than 5 days. 
+
+
+myDatabase> db.travelPackages.updateMany(
+| {duration:{$lt:5}},
+| {$inc:{price:1000}}
+| )
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 3,
+  modifiedCount: 3,
+  upsertedCount: 0
+}
+
+5. Display packages that include Goa as a destination or have a rating greater than 4.7.
+
+myDatabase> db.travelPackages.find({$or:[{destination:"Goa"},{rating:{$gt:4.7}}]})
+[
+  {
+    _id: ObjectId('6ab681968d5fbb0666149836'),
+    id: 'TP101',
+    package: 'Goa Explorer',
+    operated: 'TravelWorld',
+    destination: [ 'Goa', 'Panaji', 'Calangute' ],
+    activities: [ 'Beach', 'Water Sports', 'Sightseeing' ],
+    duration: 5,
+    price: 18000,
+    rating: 4.5
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb0666149837'),
+    id: 'TP102',
+    package: 'Himalayan Adventure',
+    operated: 'Mountain Trails',
+    destination: [ 'Manali', 'Solang Valley', 'Rohtang' ],
+    activities: [ 'Trekking', 'Camping', 'Snow Adventure' ],
+    duration: 7,
+    price: 25000,
+    rating: 4.8
+  },
+  {
+    _id: ObjectId('6ab682088d5fbb066614983b'),
+    id: 'TP106',
+    package: 'Kashmir Escape',
+    operated: 'Snow Trails',
+    destination: [ 'Srinagar', 'Gulmarg' ],
+    activities: [ 'Skiing', 'Sightseeing' ],
+    duration: 6,
+    price: 27000,
+    rating: 4.9
+  }
+]
+
+
+6. Display packages priced above ₹18000 and rated at least 4.5.
+
+myDatabase> db.travelPackages.find({price:{$gt:18000},rating:{$gte:4.5}})
+[
+  {
+    _id: ObjectId('6ab681968d5fbb0666149837'),
+    id: 'TP102',
+    package: 'Himalayan Adventure',
+    operated: 'Mountain Trails',
+    destination: [ 'Manali', 'Solang Valley', 'Rohtang' ],
+    activities: [ 'Trekking', 'Camping', 'Snow Adventure' ],
+    duration: 7,
+    price: 25000,
+    rating: 4.8
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb0666149838'),
+    id: 'TP103',
+    package: 'Rajasthan Heritage',
+    operated: 'Royal Travels',
+    destination: [ 'Jaipur', 'Jodhpur', 'Udaipur' ],
+    activities: [ 'Fort Visit', 'Desert Safari', 'Cultural Show' ],
+    duration: 6,
+    price: 22000,
+    rating: 4.6
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb0666149839'),
+    id: 'TP104',
+    package: 'Kerala Retreat',
+    operated: 'Green Hours',
+    destination: [ 'Kochi', 'Munnar', 'Alleppey' ],
+    activities: [ 'Houseboat', 'Tea Garden', 'Nature Walk' ],
+    duration: 5,
+    price: 20000,
+    rating: 4.7
+  },
+  {
+    _id: ObjectId('6ab682088d5fbb066614983b'),
+    id: 'TP106',
+    package: 'Kashmir Escape',
+    operated: 'Snow Trails',
+    destination: [ 'Srinagar', 'Gulmarg' ],
+    activities: [ 'Skiing', 'Sightseeing' ],
+    duration: 6,
+    price: 27000,
+    rating: 4.9
+  }
+]
+
+
+7. Display packages whose rating is not less than 4.5
+
+myDatabase> db.travelPackages.find({rating:{$gte:4.5}})
+[
+  {
+    _id: ObjectId('6ab681968d5fbb0666149836'),
+    id: 'TP101',
+    package: 'Goa Explorer',
+    operated: 'TravelWorld',
+    destination: [ 'Goa', 'Panaji', 'Calangute' ],
+    activities: [ 'Beach', 'Water Sports', 'Sightseeing' ],
+    duration: 5,
+    price: 18000,
+    rating: 4.5
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb0666149837'),
+    id: 'TP102',
+    package: 'Himalayan Adventure',
+    operated: 'Mountain Trails',
+    destination: [ 'Manali', 'Solang Valley', 'Rohtang' ],
+    activities: [ 'Trekking', 'Camping', 'Snow Adventure' ],
+    duration: 7,
+    price: 25000,
+    rating: 4.8
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb0666149838'),
+    id: 'TP103',
+    package: 'Rajasthan Heritage',
+    operated: 'Royal Travels',
+    destination: [ 'Jaipur', 'Jodhpur', 'Udaipur' ],
+    activities: [ 'Fort Visit', 'Desert Safari', 'Cultural Show' ],
+    duration: 6,
+    price: 22000,
+    rating: 4.6
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb0666149839'),
+    id: 'TP104',
+    package: 'Kerala Retreat',
+    operated: 'Green Hours',
+    destination: [ 'Kochi', 'Munnar', 'Alleppey' ],
+    activities: [ 'Houseboat', 'Tea Garden', 'Nature Walk' ],
+    duration: 5,
+    price: 20000,
+    rating: 4.7
+  },
+  {
+    _id: ObjectId('6ab682088d5fbb066614983b'),
+    id: 'TP106',
+    package: 'Kashmir Escape',
+    operated: 'Snow Trails',
+    destination: [ 'Srinagar', 'Gulmarg' ],
+    activities: [ 'Skiing', 'Sightseeing' ],
+    duration: 6,
+    price: 27000,
+    rating: 4.9
+  }
+]
+
+
+8. Display packages that are neither operated by TravelWorld nor Royal Travels.
+
+myDatabase> db.travelPackages.find({operated:{$nin:['TravelWorld','Royal Travels']}})
+[
+  {
+    _id: ObjectId('6ab681968d5fbb0666149837'),
+    id: 'TP102',
+    package: 'Himalayan Adventure',
+    operated: 'Mountain Trails',
+    destination: [ 'Manali', 'Solang Valley', 'Rohtang' ],
+    activities: [ 'Trekking', 'Camping', 'Snow Adventure' ],
+    duration: 7,
+    price: 25000,
+    rating: 4.8
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb0666149839'),
+    id: 'TP104',
+    package: 'Kerala Retreat',
+    operated: 'Green Hours',
+    destination: [ 'Kochi', 'Munnar', 'Alleppey' ],
+    activities: [ 'Houseboat', 'Tea Garden', 'Nature Walk' ],
+    duration: 5,
+    price: 20000,
+    rating: 4.7
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb066614983a'),
+    id: 'TP105',
+    package: 'Delhi City Tour',
+    operated: 'Urban Trips',
+    destination: [ 'Delhi', 'Agra', 'Mathura' ],
+    activities: [ 'Monument Visit', 'Shopping', 'Food Tour' ],
+    duration: 4,
+    price: 16000,
+    rating: 4.2
+  },
+  {
+    _id: ObjectId('6ab682088d5fbb066614983b'),
+    id: 'TP106',
+    package: 'Kashmir Escape',
+    operated: 'Snow Trails',
+    destination: [ 'Srinagar', 'Gulmarg' ],
+    activities: [ 'Skiing', 'Sightseeing' ],
+    duration: 6,
+    price: 27000,
+    rating: 4.9
+  },
+  {
+    _id: ObjectId('6ab684bf8d5fbb066614983c'),
+    packageId: 'TP107',
+    packageName: 'Coorg Nature',
+    operator: 'Nature Travels',
+    destinations: [ 'Coorg' ],
+    activities: [ 'Nature Walk', 'Sightseeing' ],
+    duration: 3,
+    price: 17000,
+    rating: 4.4
+  },
+  {
+    _id: ObjectId('6ab684bf8d5fbb066614983d'),
+    packageId: 'TP108',
+    packageName: 'Agra Weekend',
+    operator: 'Weekend Travels',
+    destinations: [ 'Agra' ],
+    activities: [ 'Monument Visit', 'Sightseeing' ],
+    duration: 2,
+    price: 13000,
+    rating: 4.3
+  }
+]
+
+9. Display packages whose package name starts with the letter G. 
+
+myDatabase> db.travelPackages.find({package:{$regex:'^G'}})
+[
+  {
+    _id: ObjectId('6ab681968d5fbb0666149836'),
+    id: 'TP101',
+    package: 'Goa Explorer',
+    operated: 'TravelWorld',
+    destination: [ 'Goa', 'Panaji', 'Calangute' ],
+    activities: [ 'Beach', 'Water Sports', 'Sightseeing' ],
+    duration: 5,
+    price: 18000,
+    rating: 4.5
+  }
+]
+
+10. Display packages whose package name ends with the letter r. 
+
+myDatabase> db.travelPackages.find({package:{$regex:'r$'}})
+[
+  {
+    _id: ObjectId('6ab681968d5fbb0666149836'),
+    id: 'TP101',
+    package: 'Goa Explorer',
+    operated: 'TravelWorld',
+    destination: [ 'Goa', 'Panaji', 'Calangute' ],
+    activities: [ 'Beach', 'Water Sports', 'Sightseeing' ],
+    duration: 5,
+    price: 18000,
+    rating: 4.5
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb066614983a'),
+    id: 'TP105',
+    package: 'Delhi City Tour',
+    operated: 'Urban Trips',
+    destination: [ 'Delhi', 'Agra', 'Mathura' ],
+    activities: [ 'Monument Visit', 'Shopping', 'Food Tour' ],
+    duration: 4,
+    price: 16000,
+    rating: 4.2
+  }
+]
+
+11. Display packages having a destination name of exactly 6 characters.
+
+myDatabase> db.travelPackages.find({destination:{$elemMatch:{$regex:'^.{6}$'}}})
+[
+  {
+    _id: ObjectId('6ab681968d5fbb0666149836'),
+    id: 'TP101',
+    package: 'Goa Explorer',
+    operated: 'TravelWorld',
+    destination: [ 'Goa', 'Panaji', 'Calangute' ],
+    activities: [ 'Beach', 'Water Sports', 'Sightseeing' ],
+    duration: 5,
+    price: 18000,
+    rating: 4.5
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb0666149837'),
+    id: 'TP102',
+    package: 'Himalayan Adventure',
+    operated: 'Mountain Trails',
+    destination: [ 'Manali', 'Solang Valley', 'Rohtang' ],
+    activities: [ 'Trekking', 'Camping', 'Snow Adventure' ],
+    duration: 7,
+    price: 25000,
+    rating: 4.8
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb0666149838'),
+    id: 'TP103',
+    package: 'Rajasthan Heritage',
+    operated: 'Royal Travels',
+    destination: [ 'Jaipur', 'Jodhpur', 'Udaipur' ],
+    activities: [ 'Fort Visit', 'Desert Safari', 'Cultural Show' ],
+    duration: 6,
+    price: 22000,
+    rating: 4.6
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb0666149839'),
+    id: 'TP104',
+    package: 'Kerala Retreat',
+    operated: 'Green Hours',
+    destination: [ 'Kochi', 'Munnar', 'Alleppey' ],
+    activities: [ 'Houseboat', 'Tea Garden', 'Nature Walk' ],
+    duration: 5,
+    price: 20000,
+    rating: 4.7
+  }
+]
+
+12. Display packages whose activities contain the exact word Trekking with the same capitalization.
+
+myDatabase> db.travelPackages.find({activities:"Trekking"})
+[
+  {
+    _id: ObjectId('6ab681968d5fbb0666149837'),
+    id: 'TP102',
+    package: 'Himalayan Adventure',
+    operated: 'Mountain Trails',
+    destination: [ 'Manali', 'Solang Valley', 'Rohtang' ],
+    activities: [ 'Trekking', 'Camping', 'Snow Adventure' ],
+    duration: 7,
+    price: 25000,
+    rating: 4.8
+  }
+]
+
+13. Display all packages in ascending order of price. 
+
+myDatabase> db.travelPackages.find().sort({price:1})
+[
+  {
+    _id: ObjectId('6ab684bf8d5fbb066614983d'),
+    packageId: 'TP108',
+    packageName: 'Agra Weekend',
+    operator: 'Weekend Travels',
+    destinations: [ 'Agra' ],
+    activities: [ 'Monument Visit', 'Sightseeing' ],
+    duration: 2,
+    price: 13000,
+    rating: 4.3
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb066614983a'),
+    id: 'TP105',
+    package: 'Delhi City Tour',
+    operated: 'Urban Trips',
+    destination: [ 'Delhi', 'Agra', 'Mathura' ],
+    activities: [ 'Monument Visit', 'Shopping', 'Food Tour' ],
+    duration: 4,
+    price: 16000,
+    rating: 4.2
+  },
+  {
+    _id: ObjectId('6ab684bf8d5fbb066614983c'),
+    packageId: 'TP107',
+    packageName: 'Coorg Nature',
+    operator: 'Nature Travels',
+    destinations: [ 'Coorg' ],
+    activities: [ 'Nature Walk', 'Sightseeing' ],
+    duration: 3,
+    price: 17000,
+    rating: 4.4
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb0666149836'),
+    id: 'TP101',
+    package: 'Goa Explorer',
+    operated: 'TravelWorld',
+    destination: [ 'Goa', 'Panaji', 'Calangute' ],
+    activities: [ 'Beach', 'Water Sports', 'Sightseeing' ],
+    duration: 5,
+    price: 18000,
+    rating: 4.5
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb0666149839'),
+    id: 'TP104',
+    package: 'Kerala Retreat',
+    operated: 'Green Hours',
+    destination: [ 'Kochi', 'Munnar', 'Alleppey' ],
+    activities: [ 'Houseboat', 'Tea Garden', 'Nature Walk' ],
+    duration: 5,
+    price: 20000,
+    rating: 4.7
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb0666149838'),
+    id: 'TP103',
+    package: 'Rajasthan Heritage',
+    operated: 'Royal Travels',
+    destination: [ 'Jaipur', 'Jodhpur', 'Udaipur' ],
+    activities: [ 'Fort Visit', 'Desert Safari', 'Cultural Show' ],
+    duration: 6,
+    price: 22000,
+    rating: 4.6
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb0666149837'),
+    id: 'TP102',
+    package: 'Himalayan Adventure',
+    operated: 'Mountain Trails',
+    destination: [ 'Manali', 'Solang Valley', 'Rohtang' ],
+    activities: [ 'Trekking', 'Camping', 'Snow Adventure' ],
+    duration: 7,
+    price: 25000,
+    rating: 4.8
+  },
+  {
+    _id: ObjectId('6ab682088d5fbb066614983b'),
+    id: 'TP106',
+    package: 'Kashmir Escape',
+    operated: 'Snow Trails',
+    destination: [ 'Srinagar', 'Gulmarg' ],
+    activities: [ 'Skiing', 'Sightseeing' ],
+    duration: 6,
+    price: 27000,
+    rating: 4.9
+  }
+]
+
+15. Delete the package TP108.
+
+ myDatabase> db.travelPackages.deleteOne({packageId:"TP108"})
+{ acknowledged: true, deletedCount: 1 }
+myDatabase> db.travelPackages.find()
+[
+  {
+    _id: ObjectId('6ab681968d5fbb0666149836'),
+    id: 'TP101',
+    package: 'Goa Explorer',
+    operated: 'TravelWorld',
+    destination: [ 'Goa', 'Panaji', 'Calangute' ],
+    activities: [ 'Beach', 'Water Sports', 'Sightseeing' ],
+    duration: 5,
+    price: 18000,
+    rating: 4.5
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb0666149837'),
+    id: 'TP102',
+    package: 'Himalayan Adventure',
+    operated: 'Mountain Trails',
+    destination: [ 'Manali', 'Solang Valley', 'Rohtang' ],
+    activities: [ 'Trekking', 'Camping', 'Snow Adventure' ],
+    duration: 7,
+    price: 25000,
+    rating: 4.8
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb0666149838'),
+    id: 'TP103',
+    package: 'Rajasthan Heritage',
+    operated: 'Royal Travels',
+    destination: [ 'Jaipur', 'Jodhpur', 'Udaipur' ],
+    activities: [ 'Fort Visit', 'Desert Safari', 'Cultural Show' ],
+    duration: 6,
+    price: 22000,
+    rating: 4.6
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb0666149839'),
+    id: 'TP104',
+    package: 'Kerala Retreat',
+    operated: 'Green Hours',
+    destination: [ 'Kochi', 'Munnar', 'Alleppey' ],
+    activities: [ 'Houseboat', 'Tea Garden', 'Nature Walk' ],
+    duration: 5,
+    price: 20000,
+    rating: 4.7
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb066614983a'),
+    id: 'TP105',
+    package: 'Delhi City Tour',
+    operated: 'Urban Trips',
+    destination: [ 'Delhi', 'Agra', 'Mathura' ],
+    activities: [ 'Monument Visit', 'Shopping', 'Food Tour' ],
+    duration: 4,
+    price: 16000,
+    rating: 4.2
+  },
+  {
+    _id: ObjectId('6ab682088d5fbb066614983b'),
+    id: 'TP106',
+    package: 'Kashmir Escape',
+    operated: 'Snow Trails',
+    destination: [ 'Srinagar', 'Gulmarg' ],
+    activities: [ 'Skiing', 'Sightseeing' ],
+    duration: 6,
+    price: 27000,
+    rating: 4.9
+  },
+  {
+    _id: ObjectId('6ab684bf8d5fbb066614983c'),
+    packageId: 'TP107',
+    packageName: 'Coorg Nature',
+    operator: 'Nature Travels',
+    destinations: [ 'Coorg' ],
+    activities: [ 'Nature Walk', 'Sightseeing' ],
+    duration: 3,
+    price: 17000,
+    rating: 4.4
+  }
+]
+
+
+16. Delete all packages whose rating is less than 4.3. 
+
+myDatabase> db.travelPackages.deleteMany({rating:{$lt:4.3}})
+{ acknowledged: true, deletedCount: 1 }
+myDatabase> db.travelPackages.find()
+[
+  {
+    _id: ObjectId('6ab681968d5fbb0666149836'),
+    id: 'TP101',
+    package: 'Goa Explorer',
+    operated: 'TravelWorld',
+    destination: [ 'Goa', 'Panaji', 'Calangute' ],
+    activities: [ 'Beach', 'Water Sports', 'Sightseeing' ],
+    duration: 5,
+    price: 18000,
+    rating: 4.5
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb0666149837'),
+    id: 'TP102',
+    package: 'Himalayan Adventure',
+    operated: 'Mountain Trails',
+    destination: [ 'Manali', 'Solang Valley', 'Rohtang' ],
+    activities: [ 'Trekking', 'Camping', 'Snow Adventure' ],
+    duration: 7,
+    price: 25000,
+    rating: 4.8
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb0666149838'),
+    id: 'TP103',
+    package: 'Rajasthan Heritage',
+    operated: 'Royal Travels',
+    destination: [ 'Jaipur', 'Jodhpur', 'Udaipur' ],
+    activities: [ 'Fort Visit', 'Desert Safari', 'Cultural Show' ],
+    duration: 6,
+    price: 22000,
+    rating: 4.6
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb0666149839'),
+    id: 'TP104',
+    package: 'Kerala Retreat',
+    operated: 'Green Hours',
+    destination: [ 'Kochi', 'Munnar', 'Alleppey' ],
+    activities: [ 'Houseboat', 'Tea Garden', 'Nature Walk' ],
+    duration: 5,
+    price: 20000,
+    rating: 4.7
+  },
+  {
+    _id: ObjectId('6ab682088d5fbb066614983b'),
+    id: 'TP106',
+    package: 'Kashmir Escape',
+    operated: 'Snow Trails',
+    destination: [ 'Srinagar', 'Gulmarg' ],
+    activities: [ 'Skiing', 'Sightseeing' ],
+    duration: 6,
+    price: 27000,
+    rating: 4.9
+  },
+  {
+    _id: ObjectId('6ab684bf8d5fbb066614983c'),
+    packageId: 'TP107',
+    packageName: 'Coorg Nature',
+    operator: 'Nature Travels',
+    destinations: [ 'Coorg' ],
+    activities: [ 'Nature Walk', 'Sightseeing' ],
+    duration: 3,
+    price: 17000,
+    rating: 4.4
+  }
+]
+
+
+17. Display the three most expensive packages.
+
+myDatabase> db.travelPackages.find().sort({price:-1}).limit(3)
+[
+  {
+    _id: ObjectId('6ab682088d5fbb066614983b'),
+    id: 'TP106',
+    package: 'Kashmir Escape',
+    operated: 'Snow Trails',
+    destination: [ 'Srinagar', 'Gulmarg' ],
+    activities: [ 'Skiing', 'Sightseeing' ],
+    duration: 6,
+    price: 27000,
+    rating: 4.9
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb0666149837'),
+    id: 'TP102',
+    package: 'Himalayan Adventure',
+    operated: 'Mountain Trails',
+    destination: [ 'Manali', 'Solang Valley', 'Rohtang' ],
+    activities: [ 'Trekking', 'Camping', 'Snow Adventure' ],
+    duration: 7,
+    price: 25000,
+    rating: 4.8
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb0666149838'),
+    id: 'TP103',
+    package: 'Rajasthan Heritage',
+    operated: 'Royal Travels',
+    destination: [ 'Jaipur', 'Jodhpur', 'Udaipur' ],
+    activities: [ 'Fort Visit', 'Desert Safari', 'Cultural Show' ],
+    duration: 6,
+    price: 22000,
+    rating: 4.6
+  }
+]
+
+18. Display all packages after skipping the two cheapest packages. 
+
+myDatabase> db.travelPackages.find().sort({price:1}).skip(2)
+[
+  {
+    _id: ObjectId('6ab681968d5fbb0666149839'),
+    id: 'TP104',
+    package: 'Kerala Retreat',
+    operated: 'Green Hours',
+    destination: [ 'Kochi', 'Munnar', 'Alleppey' ],
+    activities: [ 'Houseboat', 'Tea Garden', 'Nature Walk' ],
+    duration: 5,
+    price: 20000,
+    rating: 4.7
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb0666149838'),
+    id: 'TP103',
+    package: 'Rajasthan Heritage',
+    operated: 'Royal Travels',
+    destination: [ 'Jaipur', 'Jodhpur', 'Udaipur' ],
+    activities: [ 'Fort Visit', 'Desert Safari', 'Cultural Show' ],
+    duration: 6,
+    price: 22000,
+    rating: 4.6
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb0666149837'),
+    id: 'TP102',
+    package: 'Himalayan Adventure',
+    operated: 'Mountain Trails',
+    destination: [ 'Manali', 'Solang Valley', 'Rohtang' ],
+    activities: [ 'Trekking', 'Camping', 'Snow Adventure' ],
+    duration: 7,
+    price: 25000,
+    rating: 4.8
+  },
+  {
+    _id: ObjectId('6ab682088d5fbb066614983b'),
+    id: 'TP106',
+    package: 'Kashmir Escape',
+    operated: 'Snow Trails',
+    destination: [ 'Srinagar', 'Gulmarg' ],
+    activities: [ 'Skiing', 'Sightseeing' ],
+    duration: 6,
+    price: 27000,
+    rating: 4.9
+  }
+]
+
+19. Display packages whose price is exactly ₹20000. 
+
+myDatabase> db.travelPackages.find({price:20000})
+[
+  {
+    _id: ObjectId('6ab681968d5fbb0666149839'),
+    id: 'TP104',
+    package: 'Kerala Retreat',
+    operated: 'Green Hours',
+    destination: [ 'Kochi', 'Munnar', 'Alleppey' ],
+    activities: [ 'Houseboat', 'Tea Garden', 'Nature Walk' ],
+    duration: 5,
+    price: 20000,
+    rating: 4.7
+  }
+]
+
+
+20. Display packages whose duration is not 5 days.
+
+myDatabase> db.travelPackages.find({duration:{$ne:5}})
+[
+  {
+    _id: ObjectId('6ab681968d5fbb0666149837'),
+    id: 'TP102',
+    package: 'Himalayan Adventure',
+    operated: 'Mountain Trails',
+    destination: [ 'Manali', 'Solang Valley', 'Rohtang' ],
+    activities: [ 'Trekking', 'Camping', 'Snow Adventure' ],
+    duration: 7,
+    price: 25000,
+    rating: 4.8
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb0666149838'),
+    id: 'TP103',
+    package: 'Rajasthan Heritage',
+    operated: 'Royal Travels',
+    destination: [ 'Jaipur', 'Jodhpur', 'Udaipur' ],
+    activities: [ 'Fort Visit', 'Desert Safari', 'Cultural Show' ],
+    duration: 6,
+    price: 22000,
+    rating: 4.6
+  },
+  {
+    _id: ObjectId('6ab682088d5fbb066614983b'),
+    id: 'TP106',
+    package: 'Kashmir Escape',
+    operated: 'Snow Trails',
+    destination: [ 'Srinagar', 'Gulmarg' ],
+    activities: [ 'Skiing', 'Sightseeing' ],
+    duration: 6,
+    price: 27000,
+    rating: 4.9
+  },
+  {
+    _id: ObjectId('6ab684bf8d5fbb066614983c'),
+    packageId: 'TP107',
+    packageName: 'Coorg Nature',
+    operator: 'Nature Travels',
+    destinations: [ 'Coorg' ],
+    activities: [ 'Nature Walk', 'Sightseeing' ],
+    duration: 3,
+    price: 17000,
+    rating: 4.4
+  }
+]
+
+
+24. Display packages whose price is less than or equal to ₹18000. 
+
+myDatabase> db.travelPackages.find({price:{$lte:18000}})
+[
+  {
+    _id: ObjectId('6ab681968d5fbb0666149836'),
+    id: 'TP101',
+    package: 'Goa Explorer',
+    operated: 'TravelWorld',
+    destination: [ 'Goa', 'Panaji', 'Calangute' ],
+    activities: [ 'Beach', 'Water Sports', 'Sightseeing' ],
+    duration: 5,
+    price: 18000,
+    rating: 4.5
+  },
+  {
+    _id: ObjectId('6ab684bf8d5fbb066614983c'),
+    packageId: 'TP107',
+    packageName: 'Coorg Nature',
+    operator: 'Nature Travels',
+    destinations: [ 'Coorg' ],
+    activities: [ 'Nature Walk', 'Sightseeing' ],
+    duration: 3,
+    price: 17000,
+    rating: 4.4
+  }
+]
+
+
+25. Display packages that include both Trekking and Camping in the activities array.
+
+myDatabase> db.travelPackages.find({activities:{$all:['Trekking','Camping']}})
+[
+  {
+    _id: ObjectId('6ab681968d5fbb0666149837'),
+    id: 'TP102',
+    package: 'Himalayan Adventure',
+    operated: 'Mountain Trails',
+    destination: [ 'Manali', 'Solang Valley', 'Rohtang' ],
+    activities: [ 'Trekking', 'Camping', 'Snow Adventure' ],
+    duration: 7,
+    price: 25000,
+    rating: 4.8
+  }
+]
+
+
+26. Display packages whose destinations include Goa, Jaipur, or Munnar. 
+
+myDatabase> db.travelPackages.find({destination:{$in:['Goa','Munnar']}})
+[
+  {
+    _id: ObjectId('6ab681968d5fbb0666149836'),
+    id: 'TP101',
+    package: 'Goa Explorer',
+    operated: 'TravelWorld',
+    destination: [ 'Goa', 'Panaji', 'Calangute' ],
+    activities: [ 'Beach', 'Water Sports', 'Sightseeing' ],
+    duration: 5,
+    price: 18000,
+    rating: 4.5
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb0666149839'),
+    id: 'TP104',
+    package: 'Kerala Retreat',
+    operated: 'Green Hours',
+    destination: [ 'Kochi', 'Munnar', 'Alleppey' ],
+    activities: [ 'Houseboat', 'Tea Garden', 'Nature Walk' ],
+    duration: 5,
+    price: 20000,
+    rating: 4.7
+  }
+]
+
+27. Add Photography to the activities array of TP101.
+
+myDatabase> db.travelPackages.updateOne({id:'TP101'},{$addToSet:{activities:"Photography"}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+28. Remove Camping from the activities array of TP102. 
+
+myDatabase> db.travelPackages.updateOne({id:'TP102'},{$pull:{activities:"Camping"}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+myDatabase> db.travelPackages.find()
+[
+  {
+    _id: ObjectId('6ab681968d5fbb0666149836'),
+    id: 'TP101',
+    package: 'Goa Explorer',
+    operated: 'TravelWorld',
+    destination: [ 'Goa', 'Panaji', 'Calangute' ],
+    activities: [ 'Beach', 'Water Sports', 'Sightseeing', 'Photography' ],
+    duration: 5,
+    price: 18000,
+    rating: 4.5
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb0666149837'),
+    id: 'TP102',
+    package: 'Himalayan Adventure',
+    operated: 'Mountain Trails',
+    destination: [ 'Manali', 'Solang Valley', 'Rohtang' ],
+    activities: [ 'Trekking', 'Snow Adventure' ],
+    duration: 7,
+    price: 25000,
+    rating: 4.8
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb0666149838'),
+    id: 'TP103',
+    package: 'Rajasthan Heritage',
+    operated: 'Royal Travels',
+    destination: [ 'Jaipur', 'Jodhpur', 'Udaipur' ],
+    activities: [ 'Fort Visit', 'Desert Safari', 'Cultural Show' ],
+    duration: 6,
+    price: 22000,
+    rating: 4.6
+  },
+  {
+    _id: ObjectId('6ab681968d5fbb0666149839'),
+    id: 'TP104',
+    package: 'Kerala Retreat',
+    operated: 'Green Hours',
+    destination: [ 'Kochi', 'Munnar', 'Alleppey' ],
+    activities: [ 'Houseboat', 'Tea Garden', 'Nature Walk' ],
+    duration: 5,
+    price: 20000,
+    rating: 4.7
+  },
+  {
+    _id: ObjectId('6ab682088d5fbb066614983b'),
+    id: 'TP106',
+    package: 'Kashmir Escape',
+    operated: 'Snow Trails',
+    destination: [ 'Srinagar', 'Gulmarg' ],
+    activities: [ 'Skiing', 'Sightseeing' ],
+    duration: 6,
+    price: 27000,
+    rating: 4.9
+  },
+  {
+    _id: ObjectId('6ab684bf8d5fbb066614983c'),
+    packageId: 'TP107',
+    packageName: 'Coorg Nature',
+    operator: 'Nature Travels',
+    destinations: [ 'Coorg' ],
+    activities: [ 'Nature Walk', 'Sightseeing' ],
+    duration: 3,
+    price: 17000,
+    rating: 4.4
+  }
+]
+myDatabase>
+

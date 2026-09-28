@@ -1,0 +1,88 @@
+db.flight.insertMany([
+{
+	"flight_no":"AI101",
+	"airline":"Air India",
+	"source":"Delhi",
+	"destination":"Mumbai",
+	"departure_time":"2025-09-25 T 09:30:00",
+	"arrival_time":"2025-09-25 T 11:30:00",
+	"price":5500,
+	"status":"On Time"
+},
+{
+	"flight_no":"6E202",
+	"airline":"IndiGo",
+	"source":"Mumbai",
+	"destination":"Bengaluru",
+	"departure_time":"2025-09-25 T 14:00:00",
+	"arrival_time":"2025-09-25 T 16:10:00",
+	"price":4200,
+	"status":"Delayed"
+},
+{
+	"flight_no":"UK303",
+	"airline":"Vistara",
+	"source":"Delhi",
+	"destination":"Channai",
+	"departure_time":"2025-09-26 T 19:15:00",
+	"arrival_time":"2025-09-26 T 21:45:00",
+	"price":4800,
+	"status":"Cancelled"
+},
+{
+	"flight_no":"SG404",
+	"airline":"SpiceJet",
+	"source":"Kolkata",
+	"destination":"Delhi",
+	"departure_time":"2025-09-25 T 19:15:00",
+	"arrival_time":"2025-09-25 T 21:45:00",
+	"price":4800,
+	"status":"Cancelled"
+},
+{
+	"flight_no":"G805",
+	"airline":"Go First",
+	"source":"Mumbai",
+	"destination":"Goa",
+	"departure_time":"2025-09-27 T 10:00:00Z",
+	"arrival_time":"2025-09-27 T 11:15:00Z",
+	"price":3100,
+	"status":"On Time"
+},
+
+])
+
+db.flight.insertOne({
+	"flight_no":"AI606",
+	"airline":"Air India",
+	"source":"Mumbai",
+	"destination":"Delhi",
+	"departure_time":"2025-09-28 T 15:30:00",
+	"arrival_time":"2025-09-28 T 17:45:00",
+	"price":5800,
+	"status":"On Time"
+
+})
+
+db.flights.insertMany([
+    {
+        "flight_no": "6E707",
+        "airline": "IndiGo",
+        "source": "Delhi",
+        "destination": "Mumbai",
+        "departure_time": "2025-09-28 T 10:00:00",
+        "arrival_time": "2025-09-28 T 12:10:00",
+        "price": 5200,
+        "status": "On Time"
+    },
+    {
+        "flight_no": "SG808",
+        "airline": "SpiceJet",
+        "source": "Ahmedabad",
+        "destination": "Delhi",
+        "departure_time": "2025-09-28 T 18:00:00",
+        "arrival_time": "2025-09-28 T 19:45:00",
+        "price": 4500,
+        "status":"Cancelled"
+    }
+])	
