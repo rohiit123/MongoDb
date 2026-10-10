@@ -198,7 +198,7 @@ myDatabase> db.StudentPerformance.find()
 ]
 
 
-Q1. Display all students whose status is "AcCve".
+Q1. Display all students whose status is "Active".
 myDatabase> db.StudentPerformance.aggregate([{$match:{status:"Active"}}])
 [
   {
