@@ -1,0 +1,2476 @@
+myDatabase> db.StudentPerformance.find()
+[
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9c'),
+    student_id: 'ST101',
+    name: 'Aarav Shah',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Ahmedabad',
+    marks: 82,
+    attendance: 91,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'DBMS', 'AIML', 'Network Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9d'),
+    student_id: 'ST102',
+    name: 'Diya Patel',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Vadodara',
+    marks: 76,
+    attendance: 88,
+    grade: 'B',
+    status: 'Active',
+    subjects: [ 'DBMS', 'Python', 'Cyber Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9e'),
+    student_id: 'ST103',
+    name: 'Rohan Mehta',
+    department: 'MCA',
+    semester: 1,
+    city: 'Surat',
+    marks: 91,
+    attendance: 95,
+    grade: 'A+',
+    status: 'Active',
+    subjects: [ 'Java', 'DBMS', 'Web Technology' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9f'),
+    student_id: 'ST104',
+    name: 'Ananya Desai',
+    department: 'MCA',
+    semester: 1,
+    city: 'Ahmedabad',
+    marks: 68,
+    attendance: 79,
+    grade: 'C',
+    status: 'Active',
+    subjects: [ 'Java', 'Mathematics', 'Web Technology' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa0'),
+    student_id: 'ST105',
+    name: 'Kabir Joshi',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Rajkot',
+    marks: 88,
+    attendance: 93,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'AIML', 'DBMS', 'Network Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa1'),
+    student_id: 'ST106',
+    name: 'Meera Trivedi',
+    department: 'MCA',
+    semester: 2,
+    city: 'Ahmedabad',
+    marks: 73,
+    attendance: 85,
+    grade: 'B',
+    status: 'Active',
+    subjects: [ 'Python', 'Cloud Computing', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa2'),
+    student_id: 'ST107',
+    name: 'Vivaan Patel',
+    department: 'MScIT',
+    semester: 1,
+    city: 'Surat',
+    marks: 95,
+    attendance: 97,
+    grade: 'A+',
+    status: 'Active',
+    subjects: [ 'Python', 'AIML', 'Mathematics' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa3'),
+    student_id: 'ST108',
+    name: 'Isha Shah',
+    department: 'MCA',
+    semester: 2,
+    city: 'Vadodara',
+    marks: 81,
+    attendance: 90,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'Java', 'DBMS', 'Cloud Computing' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa4'),
+    student_id: 'ST109',
+    name: 'Arjun Patel',
+    department: 'MScIT',
+    semester: 1,
+    city: 'Ahmedabad',
+    marks: 64,
+    attendance: 72,
+    grade: 'C',
+    status: 'Inactive',
+    subjects: [ 'Python', 'DBMS', 'Network Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa5'),
+    student_id: 'ST110',
+    name: 'Sara Mehta',
+    department: 'MCA',
+    semester: 1,
+    city: 'Rajkot',
+    marks: 89,
+    attendance: 94,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'Java', 'Web Technology', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa6'),
+    student_id: 'ST111',
+    name: 'Dev Shah',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Vadodara',
+    marks: 78,
+    attendance: 86,
+    grade: 'B',
+    status: 'Active',
+    subjects: [ 'AIML', 'Python', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa7'),
+    student_id: 'ST112',
+    name: 'Kiara Desai',
+    department: 'MCA',
+    semester: 2,
+    city: 'Surat',
+    marks: 92,
+    attendance: 96,
+    grade: 'A+',
+    status: 'Active',
+    subjects: [ 'Java', 'Cloud Computing', 'Cyber Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa8'),
+    student_id: 'ST113',
+    name: 'Yash Joshi',
+    department: 'MScIT',
+    semester: 1,
+    city: 'Rajkot',
+    marks: 71,
+    attendance: 81,
+    grade: 'B',
+    status: 'Active',
+    subjects: [ 'Python', 'Network Security', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa9'),
+    student_id: 'ST114',
+    name: 'Myra Shah',
+    department: 'MCA',
+    semester: 1,
+    city: 'Ahmedabad',
+    marks: 85,
+    attendance: 89,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'Java', 'DBMS', 'Web Technology' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78faa'),
+    student_id: 'ST115',
+    name: 'Reyansh Patel',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Surat',
+    marks: 67,
+    attendance: 76,
+    grade: 'C',
+    status: 'Inactive',
+    subjects: [ 'AIML', 'Python', 'Network Security' ]
+  }
+]
+
+
+Q1. Display all students whose status is "AcCve".
+myDatabase> db.StudentPerformance.aggregate([{$match:{status:"Active"}}])
+[
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9c'),
+    student_id: 'ST101',
+    name: 'Aarav Shah',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Ahmedabad',
+    marks: 82,
+    attendance: 91,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'DBMS', 'AIML', 'Network Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9d'),
+    student_id: 'ST102',
+    name: 'Diya Patel',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Vadodara',
+    marks: 76,
+    attendance: 88,
+    grade: 'B',
+    status: 'Active',
+    subjects: [ 'DBMS', 'Python', 'Cyber Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9e'),
+    student_id: 'ST103',
+    name: 'Rohan Mehta',
+    department: 'MCA',
+    semester: 1,
+    city: 'Surat',
+    marks: 91,
+    attendance: 95,
+    grade: 'A+',
+    status: 'Active',
+    subjects: [ 'Java', 'DBMS', 'Web Technology' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9f'),
+    student_id: 'ST104',
+    name: 'Ananya Desai',
+    department: 'MCA',
+    semester: 1,
+    city: 'Ahmedabad',
+    marks: 68,
+    attendance: 79,
+    grade: 'C',
+    status: 'Active',
+    subjects: [ 'Java', 'Mathematics', 'Web Technology' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa0'),
+    student_id: 'ST105',
+    name: 'Kabir Joshi',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Rajkot',
+    marks: 88,
+    attendance: 93,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'AIML', 'DBMS', 'Network Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa1'),
+    student_id: 'ST106',
+    name: 'Meera Trivedi',
+    department: 'MCA',
+    semester: 2,
+    city: 'Ahmedabad',
+    marks: 73,
+    attendance: 85,
+    grade: 'B',
+    status: 'Active',
+    subjects: [ 'Python', 'Cloud Computing', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa2'),
+    student_id: 'ST107',
+    name: 'Vivaan Patel',
+    department: 'MScIT',
+    semester: 1,
+    city: 'Surat',
+    marks: 95,
+    attendance: 97,
+    grade: 'A+',
+    status: 'Active',
+    subjects: [ 'Python', 'AIML', 'Mathematics' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa3'),
+    student_id: 'ST108',
+    name: 'Isha Shah',
+    department: 'MCA',
+    semester: 2,
+    city: 'Vadodara',
+    marks: 81,
+    attendance: 90,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'Java', 'DBMS', 'Cloud Computing' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa5'),
+    student_id: 'ST110',
+    name: 'Sara Mehta',
+    department: 'MCA',
+    semester: 1,
+    city: 'Rajkot',
+    marks: 89,
+    attendance: 94,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'Java', 'Web Technology', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa6'),
+    student_id: 'ST111',
+    name: 'Dev Shah',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Vadodara',
+    marks: 78,
+    attendance: 86,
+    grade: 'B',
+    status: 'Active',
+    subjects: [ 'AIML', 'Python', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa7'),
+    student_id: 'ST112',
+    name: 'Kiara Desai',
+    department: 'MCA',
+    semester: 2,
+    city: 'Surat',
+    marks: 92,
+    attendance: 96,
+    grade: 'A+',
+    status: 'Active',
+    subjects: [ 'Java', 'Cloud Computing', 'Cyber Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa8'),
+    student_id: 'ST113',
+    name: 'Yash Joshi',
+    department: 'MScIT',
+    semester: 1,
+    city: 'Rajkot',
+    marks: 71,
+    attendance: 81,
+    grade: 'B',
+    status: 'Active',
+    subjects: [ 'Python', 'Network Security', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa9'),
+    student_id: 'ST114',
+    name: 'Myra Shah',
+    department: 'MCA',
+    semester: 1,
+    city: 'Ahmedabad',
+    marks: 85,
+    attendance: 89,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'Java', 'DBMS', 'Web Technology' ]
+  }
+]
+
+Q2. Display all students belonging to the "MScIT" department.
+
+myDatabase> db.StudentPerformance.aggregate([{$match:{department:"MScIT"}}])
+[
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9c'),
+    student_id: 'ST101',
+    name: 'Aarav Shah',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Ahmedabad',
+    marks: 82,
+    attendance: 91,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'DBMS', 'AIML', 'Network Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9d'),
+    student_id: 'ST102',
+    name: 'Diya Patel',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Vadodara',
+    marks: 76,
+    attendance: 88,
+    grade: 'B',
+    status: 'Active',
+    subjects: [ 'DBMS', 'Python', 'Cyber Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa0'),
+    student_id: 'ST105',
+    name: 'Kabir Joshi',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Rajkot',
+    marks: 88,
+    attendance: 93,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'AIML', 'DBMS', 'Network Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa2'),
+    student_id: 'ST107',
+    name: 'Vivaan Patel',
+    department: 'MScIT',
+    semester: 1,
+    city: 'Surat',
+    marks: 95,
+    attendance: 97,
+    grade: 'A+',
+    status: 'Active',
+    subjects: [ 'Python', 'AIML', 'Mathematics' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa4'),
+    student_id: 'ST109',
+    name: 'Arjun Patel',
+    department: 'MScIT',
+    semester: 1,
+    city: 'Ahmedabad',
+    marks: 64,
+    attendance: 72,
+    grade: 'C',
+    status: 'Inactive',
+    subjects: [ 'Python', 'DBMS', 'Network Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa6'),
+    student_id: 'ST111',
+    name: 'Dev Shah',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Vadodara',
+    marks: 78,
+    attendance: 86,
+    grade: 'B',
+    status: 'Active',
+    subjects: [ 'AIML', 'Python', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa8'),
+    student_id: 'ST113',
+    name: 'Yash Joshi',
+    department: 'MScIT',
+    semester: 1,
+    city: 'Rajkot',
+    marks: 71,
+    attendance: 81,
+    grade: 'B',
+    status: 'Active',
+    subjects: [ 'Python', 'Network Security', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78faa'),
+    student_id: 'ST115',
+    name: 'Reyansh Patel',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Surat',
+    marks: 67,
+    attendance: 76,
+    grade: 'C',
+    status: 'Inactive',
+    subjects: [ 'AIML', 'Python', 'Network Security' ]
+  }
+]
+
+Q3. Display all students who have scored more than 80 marks.
+
+myDatabase> db.StudentPerformance.aggregate([{$match:{marks:{$gt:80}}}])
+[
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9c'),
+    student_id: 'ST101',
+    name: 'Aarav Shah',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Ahmedabad',
+    marks: 82,
+    attendance: 91,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'DBMS', 'AIML', 'Network Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9e'),
+    student_id: 'ST103',
+    name: 'Rohan Mehta',
+    department: 'MCA',
+    semester: 1,
+    city: 'Surat',
+    marks: 91,
+    attendance: 95,
+    grade: 'A+',
+    status: 'Active',
+    subjects: [ 'Java', 'DBMS', 'Web Technology' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa0'),
+    student_id: 'ST105',
+    name: 'Kabir Joshi',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Rajkot',
+    marks: 88,
+    attendance: 93,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'AIML', 'DBMS', 'Network Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa2'),
+    student_id: 'ST107',
+    name: 'Vivaan Patel',
+    department: 'MScIT',
+    semester: 1,
+    city: 'Surat',
+    marks: 95,
+    attendance: 97,
+    grade: 'A+',
+    status: 'Active',
+    subjects: [ 'Python', 'AIML', 'Mathematics' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa3'),
+    student_id: 'ST108',
+    name: 'Isha Shah',
+    department: 'MCA',
+    semester: 2,
+    city: 'Vadodara',
+    marks: 81,
+    attendance: 90,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'Java', 'DBMS', 'Cloud Computing' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa5'),
+    student_id: 'ST110',
+    name: 'Sara Mehta',
+    department: 'MCA',
+    semester: 1,
+    city: 'Rajkot',
+    marks: 89,
+    attendance: 94,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'Java', 'Web Technology', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa7'),
+    student_id: 'ST112',
+    name: 'Kiara Desai',
+    department: 'MCA',
+    semester: 2,
+    city: 'Surat',
+    marks: 92,
+    attendance: 96,
+    grade: 'A+',
+    status: 'Active',
+    subjects: [ 'Java', 'Cloud Computing', 'Cyber Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa9'),
+    student_id: 'ST114',
+    name: 'Myra Shah',
+    department: 'MCA',
+    semester: 1,
+    city: 'Ahmedabad',
+    marks: 85,
+    attendance: 89,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'Java', 'DBMS', 'Web Technology' ]
+  }
+]
+
+Q4. Display all students whose aLendance is 90 or above.
+
+myDatabase> db.StudentPerformance.aggregate([{$match:{attendance:{$gte:90}}}])
+[
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9c'),
+    student_id: 'ST101',
+    name: 'Aarav Shah',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Ahmedabad',
+    marks: 82,
+    attendance: 91,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'DBMS', 'AIML', 'Network Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9e'),
+    student_id: 'ST103',
+    name: 'Rohan Mehta',
+    department: 'MCA',
+    semester: 1,
+    city: 'Surat',
+    marks: 91,
+    attendance: 95,
+    grade: 'A+',
+    status: 'Active',
+    subjects: [ 'Java', 'DBMS', 'Web Technology' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa0'),
+    student_id: 'ST105',
+    name: 'Kabir Joshi',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Rajkot',
+    marks: 88,
+    attendance: 93,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'AIML', 'DBMS', 'Network Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa2'),
+    student_id: 'ST107',
+    name: 'Vivaan Patel',
+    department: 'MScIT',
+    semester: 1,
+    city: 'Surat',
+    marks: 95,
+    attendance: 97,
+    grade: 'A+',
+    status: 'Active',
+    subjects: [ 'Python', 'AIML', 'Mathematics' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa3'),
+    student_id: 'ST108',
+    name: 'Isha Shah',
+    department: 'MCA',
+    semester: 2,
+    city: 'Vadodara',
+    marks: 81,
+    attendance: 90,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'Java', 'DBMS', 'Cloud Computing' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa5'),
+    student_id: 'ST110',
+    name: 'Sara Mehta',
+    department: 'MCA',
+    semester: 1,
+    city: 'Rajkot',
+    marks: 89,
+    attendance: 94,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'Java', 'Web Technology', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa7'),
+    student_id: 'ST112',
+    name: 'Kiara Desai',
+    department: 'MCA',
+    semester: 2,
+    city: 'Surat',
+    marks: 92,
+    attendance: 96,
+    grade: 'A+',
+    status: 'Active',
+    subjects: [ 'Java', 'Cloud Computing', 'Cyber Security' ]
+  }
+]
+
+Q5. Display all acCve students from the MCA department.
+
+myDatabase> db.StudentPerformance.aggregate([{$match:{status:"Active",department:"MCA"}}])
+[
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9e'),
+    student_id: 'ST103',
+    name: 'Rohan Mehta',
+    department: 'MCA',
+    semester: 1,
+    city: 'Surat',
+    marks: 91,
+    attendance: 95,
+    grade: 'A+',
+    status: 'Active',
+    subjects: [ 'Java', 'DBMS', 'Web Technology' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9f'),
+    student_id: 'ST104',
+    name: 'Ananya Desai',
+    department: 'MCA',
+    semester: 1,
+    city: 'Ahmedabad',
+    marks: 68,
+    attendance: 79,
+    grade: 'C',
+    status: 'Active',
+    subjects: [ 'Java', 'Mathematics', 'Web Technology' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa1'),
+    student_id: 'ST106',
+    name: 'Meera Trivedi',
+    department: 'MCA',
+    semester: 2,
+    city: 'Ahmedabad',
+    marks: 73,
+    attendance: 85,
+    grade: 'B',
+    status: 'Active',
+    subjects: [ 'Python', 'Cloud Computing', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa3'),
+    student_id: 'ST108',
+    name: 'Isha Shah',
+    department: 'MCA',
+    semester: 2,
+    city: 'Vadodara',
+    marks: 81,
+    attendance: 90,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'Java', 'DBMS', 'Cloud Computing' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa5'),
+    student_id: 'ST110',
+    name: 'Sara Mehta',
+    department: 'MCA',
+    semester: 1,
+    city: 'Rajkot',
+    marks: 89,
+    attendance: 94,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'Java', 'Web Technology', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa7'),
+    student_id: 'ST112',
+    name: 'Kiara Desai',
+    department: 'MCA',
+    semester: 2,
+    city: 'Surat',
+    marks: 92,
+    attendance: 96,
+    grade: 'A+',
+    status: 'Active',
+    subjects: [ 'Java', 'Cloud Computing', 'Cyber Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa9'),
+    student_id: 'ST114',
+    name: 'Myra Shah',
+    department: 'MCA',
+    semester: 1,
+    city: 'Ahmedabad',
+    marks: 85,
+    attendance: 89,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'Java', 'DBMS', 'Web Technology' ]
+  }
+]
+Q6. Find the number of students in each department.
+
+myDatabase> db.StudentPerformance.aggregate([{$group:{_id:"$department",total_students:{$sum:1}}}])
+[
+  { _id: 'MCA', total_students: 7 },
+  { _id: 'MScIT', total_students: 8 }
+]
+
+
+myDatabase> db.StudentPerformance.aggregate([{$group:{_id:"$status",total_students:{$sum:1}}}])
+[
+  { _id: 'Active', total_students: 13 },
+  { _id: 'Inactive', total_students: 2 }
+]
+
+Q7. Find the average marks of students in each department.
+
+myDatabase> db.StudentPerformance.aggregate([{$group:{_id:"$department",average_marks:{$avg:"$marks"}}}])
+[
+  { _id: 'MCA', average_marks: 82.71428571428571 },
+  { _id: 'MScIT', average_marks: 77.625 }
+]
+
+Q8. Find the highest marks obtained in each department.
+
+myDatabase> db.StudentPerformance.aggregate([{$group:{_id:"$department",Higest_marks:{$max:"$marks"}}}])
+[
+  { _id: 'MCA', Higest_marks: 92 },
+  { _id: 'MScIT', Higest_marks: 95 }
+]
+
+Q9. Find the lowest marks obtained in each department.
+
+]
+myDatabase> db.StudentPerformance.aggregate([{$group:{_id:"$department",Lowest_marks:{$min:"$marks"}}}])
+[
+  { _id: 'MScIT', Lowest_marks: 64 },
+  { _id: 'MCA', Lowest_marks: 68 }
+]
+
+Q10. Find the total number of students in the collecCon using $group.
+
+myDatabase> db.StudentPerformance.aggregate([{$group:{_id:null,Total_students:{$sum:1}}}])
+[ { _id: null, Total_students: 15 } ]
+
+Q11. Display only student_id, name, department, and marks.
+
+myDatabase> db.StudentPerformance.aggregate([{$project:{_id:0,student_id:1,nname:1,department:1,marks:1}}])
+[
+  {
+    student_id: 'ST101',
+    name: 'Aarav Shah',
+    department: 'MScIT',
+    marks: 82
+  },
+  {
+    student_id: 'ST102',
+    name: 'Diya Patel',
+    department: 'MScIT',
+    marks: 76
+  },
+  {
+    student_id: 'ST103',
+    name: 'Rohan Mehta',
+    department: 'MCA',
+    marks: 91
+  },
+  {
+    student_id: 'ST104',
+    name: 'Ananya Desai',
+    department: 'MCA',
+    marks: 68
+  },
+  {
+    student_id: 'ST105',
+    name: 'Kabir Joshi',
+    department: 'MScIT',
+    marks: 88
+  },
+  {
+    student_id: 'ST106',
+    name: 'Meera Trivedi',
+    department: 'MCA',
+    marks: 73
+  },
+  {
+    student_id: 'ST107',
+    name: 'Vivaan Patel',
+    department: 'MScIT',
+    marks: 95
+  },
+  {
+    student_id: 'ST108',
+    name: 'Isha Shah',
+    department: 'MCA',
+    marks: 81
+  },
+  {
+    student_id: 'ST109',
+    name: 'Arjun Patel',
+    department: 'MScIT',
+    marks: 64
+  },
+  {
+    student_id: 'ST110',
+    name: 'Sara Mehta',
+    department: 'MCA',
+    marks: 89
+  },
+  {
+    student_id: 'ST111',
+    name: 'Dev Shah',
+    department: 'MScIT',
+    marks: 78
+  },
+  {
+    student_id: 'ST112',
+    name: 'Kiara Desai',
+    department: 'MCA',
+    marks: 92
+  },
+  {
+    student_id: 'ST113',
+    name: 'Yash Joshi',
+    department: 'MScIT',
+    marks: 71
+  },
+  {
+    student_id: 'ST114',
+    name: 'Myra Shah',
+    department: 'MCA',
+    marks: 85
+  },
+  {
+    student_id: 'ST115',
+    name: 'Reyansh Patel',
+    department: 'MScIT',
+    marks: 67
+  }
+]
+
+Q12. Display the student's name and marks, but rename marks as total_marks.
+
+myDatabase> db.StudentPerformance.aggregate([{$project:{_id:0,name:1,total_marks:"$marks"}}])
+[
+  { name: 'Aarav Shah', total_marks: 82 },
+  { name: 'Diya Patel', total_marks: 76 },
+  { name: 'Rohan Mehta', total_marks: 91 },
+  { name: 'Ananya Desai', total_marks: 68 },
+  { name: 'Kabir Joshi', total_marks: 88 },
+  { name: 'Meera Trivedi', total_marks: 73 },
+  { name: 'Vivaan Patel', total_marks: 95 },
+  { name: 'Isha Shah', total_marks: 81 },
+  { name: 'Arjun Patel', total_marks: 64 },
+  { name: 'Sara Mehta', total_marks: 89 },
+  { name: 'Dev Shah', total_marks: 78 },
+  { name: 'Kiara Desai', total_marks: 92 },
+  { name: 'Yash Joshi', total_marks: 71 },
+  { name: 'Myra Shah', total_marks: 85 },
+  { name: 'Reyansh Patel', total_marks: 67 }
+]
+
+Q13. Display name, department, marks, and attendance, excluding _id.
+
+myDatabase> db.StudentPerformance.aggregate([{$project:{_id:0,name:1,department:1,marks:1,attendance:1}}])
+[
+  { name: 'Aarav Shah', department: 'MScIT', marks: 82, attendance: 91 },
+  { name: 'Diya Patel', department: 'MScIT', marks: 76, attendance: 88 },
+  { name: 'Rohan Mehta', department: 'MCA', marks: 91, attendance: 95 },
+  { name: 'Ananya Desai', department: 'MCA', marks: 68, attendance: 79 },
+  { name: 'Kabir Joshi', department: 'MScIT', marks: 88, attendance: 93 },
+  { name: 'Meera Trivedi', department: 'MCA', marks: 73, attendance: 85 },
+  {
+    name: 'Vivaan Patel',
+    department: 'MScIT',
+    marks: 95,
+    attendance: 97
+  },
+  { name: 'Isha Shah', department: 'MCA', marks: 81, attendance: 90 },
+  { name: 'Arjun Patel', department: 'MScIT', marks: 64, attendance: 72 },
+  { name: 'Sara Mehta', department: 'MCA', marks: 89, attendance: 94 },
+  { name: 'Dev Shah', department: 'MScIT', marks: 78, attendance: 86 },
+  { name: 'Kiara Desai', department: 'MCA', marks: 92, attendance: 96 },
+  { name: 'Yash Joshi', department: 'MScIT', marks: 71, attendance: 81 },
+  { name: 'Myra Shah', department: 'MCA', marks: 85, attendance: 89 },
+  {
+    name: 'Reyansh Patel',
+    department: 'MScIT',
+    marks: 67,
+    attendance: 76
+  }
+]
+
+Q14. Display name, city, and grade only.
+
+myDatabase> db.StudentPerformance.aggregate([{$project:{_id:0,name:1,city:1,grade:1}}])
+[
+  { name: 'Aarav Shah', city: 'Ahmedabad', grade: 'A' },
+  { name: 'Diya Patel', city: 'Vadodara', grade: 'B' },
+  { name: 'Rohan Mehta', city: 'Surat', grade: 'A+' },
+  { name: 'Ananya Desai', city: 'Ahmedabad', grade: 'C' },
+  { name: 'Kabir Joshi', city: 'Rajkot', grade: 'A' },
+  { name: 'Meera Trivedi', city: 'Ahmedabad', grade: 'B' },
+  { name: 'Vivaan Patel', city: 'Surat', grade: 'A+' },
+  { name: 'Isha Shah', city: 'Vadodara', grade: 'A' },
+  { name: 'Arjun Patel', city: 'Ahmedabad', grade: 'C' },
+  { name: 'Sara Mehta', city: 'Rajkot', grade: 'A' },
+  { name: 'Dev Shah', city: 'Vadodara', grade: 'B' },
+  { name: 'Kiara Desai', city: 'Surat', grade: 'A+' },
+  { name: 'Yash Joshi', city: 'Rajkot', grade: 'B' },
+  { name: 'Myra Shah', city: 'Ahmedabad', grade: 'A' },
+  { name: 'Reyansh Patel', city: 'Surat', grade: 'C' }
+]
+
+Q15. Display name and subjects for all students.
+
+myDatabase> db.StudentPerformance.aggregate([{$project:{_id:0,name:1,subjects:1}}])
+[
+  {
+    name: 'Aarav Shah',
+    subjects: [ 'DBMS', 'AIML', 'Network Security' ]
+  },
+  {
+    name: 'Diya Patel',
+    subjects: [ 'DBMS', 'Python', 'Cyber Security' ]
+  },
+  { name: 'Rohan Mehta', subjects: [ 'Java', 'DBMS', 'Web Technology' ] },
+  {
+    name: 'Ananya Desai',
+    subjects: [ 'Java', 'Mathematics', 'Web Technology' ]
+  },
+  {
+    name: 'Kabir Joshi',
+    subjects: [ 'AIML', 'DBMS', 'Network Security' ]
+  },
+  {
+    name: 'Meera Trivedi',
+    subjects: [ 'Python', 'Cloud Computing', 'DBMS' ]
+  },
+  { name: 'Vivaan Patel', subjects: [ 'Python', 'AIML', 'Mathematics' ] },
+  { name: 'Isha Shah', subjects: [ 'Java', 'DBMS', 'Cloud Computing' ] },
+  {
+    name: 'Arjun Patel',
+    subjects: [ 'Python', 'DBMS', 'Network Security' ]
+  },
+  { name: 'Sara Mehta', subjects: [ 'Java', 'Web Technology', 'DBMS' ] },
+  { name: 'Dev Shah', subjects: [ 'AIML', 'Python', 'DBMS' ] },
+  {
+    name: 'Kiara Desai',
+    subjects: [ 'Java', 'Cloud Computing', 'Cyber Security' ]
+  },
+  {
+    name: 'Yash Joshi',
+    subjects: [ 'Python', 'Network Security', 'DBMS' ]
+  },
+  { name: 'Myra Shah', subjects: [ 'Java', 'DBMS', 'Web Technology' ] },
+  {
+    name: 'Reyansh Patel',
+    subjects: [ 'AIML', 'Python', 'Network Security' ]
+  }
+]
+
+Q16. Display all students sorted by marks in ascending order.
+
+myDatabase> db.StudentPerformance.aggregate([{$sort:{marks:1}}])
+[
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa4'),
+    student_id: 'ST109',
+    name: 'Arjun Patel',
+    department: 'MScIT',
+    semester: 1,
+    city: 'Ahmedabad',
+    marks: 64,
+    attendance: 72,
+    grade: 'C',
+    status: 'Inactive',
+    subjects: [ 'Python', 'DBMS', 'Network Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78faa'),
+    student_id: 'ST115',
+    name: 'Reyansh Patel',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Surat',
+    marks: 67,
+    attendance: 76,
+    grade: 'C',
+    status: 'Inactive',
+    subjects: [ 'AIML', 'Python', 'Network Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9f'),
+    student_id: 'ST104',
+    name: 'Ananya Desai',
+    department: 'MCA',
+    semester: 1,
+    city: 'Ahmedabad',
+    marks: 68,
+    attendance: 79,
+    grade: 'C',
+    status: 'Active',
+    subjects: [ 'Java', 'Mathematics', 'Web Technology' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa8'),
+    student_id: 'ST113',
+    name: 'Yash Joshi',
+    department: 'MScIT',
+    semester: 1,
+    city: 'Rajkot',
+    marks: 71,
+    attendance: 81,
+    grade: 'B',
+    status: 'Active',
+    subjects: [ 'Python', 'Network Security', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa1'),
+    student_id: 'ST106',
+    name: 'Meera Trivedi',
+    department: 'MCA',
+    semester: 2,
+    city: 'Ahmedabad',
+    marks: 73,
+    attendance: 85,
+    grade: 'B',
+    status: 'Active',
+    subjects: [ 'Python', 'Cloud Computing', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9d'),
+    student_id: 'ST102',
+    name: 'Diya Patel',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Vadodara',
+    marks: 76,
+    attendance: 88,
+    grade: 'B',
+    status: 'Active',
+    subjects: [ 'DBMS', 'Python', 'Cyber Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa6'),
+    student_id: 'ST111',
+    name: 'Dev Shah',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Vadodara',
+    marks: 78,
+    attendance: 86,
+    grade: 'B',
+    status: 'Active',
+    subjects: [ 'AIML', 'Python', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa3'),
+    student_id: 'ST108',
+    name: 'Isha Shah',
+    department: 'MCA',
+    semester: 2,
+    city: 'Vadodara',
+    marks: 81,
+    attendance: 90,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'Java', 'DBMS', 'Cloud Computing' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9c'),
+    student_id: 'ST101',
+    name: 'Aarav Shah',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Ahmedabad',
+    marks: 82,
+    attendance: 91,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'DBMS', 'AIML', 'Network Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa9'),
+    student_id: 'ST114',
+    name: 'Myra Shah',
+    department: 'MCA',
+    semester: 1,
+    city: 'Ahmedabad',
+    marks: 85,
+    attendance: 89,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'Java', 'DBMS', 'Web Technology' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa0'),
+    student_id: 'ST105',
+    name: 'Kabir Joshi',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Rajkot',
+    marks: 88,
+    attendance: 93,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'AIML', 'DBMS', 'Network Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa5'),
+    student_id: 'ST110',
+    name: 'Sara Mehta',
+    department: 'MCA',
+    semester: 1,
+    city: 'Rajkot',
+    marks: 89,
+    attendance: 94,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'Java', 'Web Technology', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9e'),
+    student_id: 'ST103',
+    name: 'Rohan Mehta',
+    department: 'MCA',
+    semester: 1,
+    city: 'Surat',
+    marks: 91,
+    attendance: 95,
+    grade: 'A+',
+    status: 'Active',
+    subjects: [ 'Java', 'DBMS', 'Web Technology' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa7'),
+    student_id: 'ST112',
+    name: 'Kiara Desai',
+    department: 'MCA',
+    semester: 2,
+    city: 'Surat',
+    marks: 92,
+    attendance: 96,
+    grade: 'A+',
+    status: 'Active',
+    subjects: [ 'Java', 'Cloud Computing', 'Cyber Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa2'),
+    student_id: 'ST107',
+    name: 'Vivaan Patel',
+    department: 'MScIT',
+    semester: 1,
+    city: 'Surat',
+    marks: 95,
+    attendance: 97,
+    grade: 'A+',
+    status: 'Active',
+    subjects: [ 'Python', 'AIML', 'Mathematics' ]
+  }
+]
+
+Q17. Display all students sorted by marks in descending order.
+
+myDatabase> db.StudentPerformance.aggregate([{$sort:{marks:-1}}])
+[
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa2'),
+    student_id: 'ST107',
+    name: 'Vivaan Patel',
+    department: 'MScIT',
+    semester: 1,
+    city: 'Surat',
+    marks: 95,
+    attendance: 97,
+    grade: 'A+',
+    status: 'Active',
+    subjects: [ 'Python', 'AIML', 'Mathematics' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa7'),
+    student_id: 'ST112',
+    name: 'Kiara Desai',
+    department: 'MCA',
+    semester: 2,
+    city: 'Surat',
+    marks: 92,
+    attendance: 96,
+    grade: 'A+',
+    status: 'Active',
+    subjects: [ 'Java', 'Cloud Computing', 'Cyber Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9e'),
+    student_id: 'ST103',
+    name: 'Rohan Mehta',
+    department: 'MCA',
+    semester: 1,
+    city: 'Surat',
+    marks: 91,
+    attendance: 95,
+    grade: 'A+',
+    status: 'Active',
+    subjects: [ 'Java', 'DBMS', 'Web Technology' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa5'),
+    student_id: 'ST110',
+    name: 'Sara Mehta',
+    department: 'MCA',
+    semester: 1,
+    city: 'Rajkot',
+    marks: 89,
+    attendance: 94,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'Java', 'Web Technology', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa0'),
+    student_id: 'ST105',
+    name: 'Kabir Joshi',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Rajkot',
+    marks: 88,
+    attendance: 93,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'AIML', 'DBMS', 'Network Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa9'),
+    student_id: 'ST114',
+    name: 'Myra Shah',
+    department: 'MCA',
+    semester: 1,
+    city: 'Ahmedabad',
+    marks: 85,
+    attendance: 89,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'Java', 'DBMS', 'Web Technology' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9c'),
+    student_id: 'ST101',
+    name: 'Aarav Shah',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Ahmedabad',
+    marks: 82,
+    attendance: 91,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'DBMS', 'AIML', 'Network Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa3'),
+    student_id: 'ST108',
+    name: 'Isha Shah',
+    department: 'MCA',
+    semester: 2,
+    city: 'Vadodara',
+    marks: 81,
+    attendance: 90,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'Java', 'DBMS', 'Cloud Computing' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa6'),
+    student_id: 'ST111',
+    name: 'Dev Shah',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Vadodara',
+    marks: 78,
+    attendance: 86,
+    grade: 'B',
+    status: 'Active',
+    subjects: [ 'AIML', 'Python', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9d'),
+    student_id: 'ST102',
+    name: 'Diya Patel',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Vadodara',
+    marks: 76,
+    attendance: 88,
+    grade: 'B',
+    status: 'Active',
+    subjects: [ 'DBMS', 'Python', 'Cyber Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa1'),
+    student_id: 'ST106',
+    name: 'Meera Trivedi',
+    department: 'MCA',
+    semester: 2,
+    city: 'Ahmedabad',
+    marks: 73,
+    attendance: 85,
+    grade: 'B',
+    status: 'Active',
+    subjects: [ 'Python', 'Cloud Computing', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa8'),
+    student_id: 'ST113',
+    name: 'Yash Joshi',
+    department: 'MScIT',
+    semester: 1,
+    city: 'Rajkot',
+    marks: 71,
+    attendance: 81,
+    grade: 'B',
+    status: 'Active',
+    subjects: [ 'Python', 'Network Security', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9f'),
+    student_id: 'ST104',
+    name: 'Ananya Desai',
+    department: 'MCA',
+    semester: 1,
+    city: 'Ahmedabad',
+    marks: 68,
+    attendance: 79,
+    grade: 'C',
+    status: 'Active',
+    subjects: [ 'Java', 'Mathematics', 'Web Technology' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78faa'),
+    student_id: 'ST115',
+    name: 'Reyansh Patel',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Surat',
+    marks: 67,
+    attendance: 76,
+    grade: 'C',
+    status: 'Inactive',
+    subjects: [ 'AIML', 'Python', 'Network Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa4'),
+    student_id: 'ST109',
+    name: 'Arjun Patel',
+    department: 'MScIT',
+    semester: 1,
+    city: 'Ahmedabad',
+    marks: 64,
+    attendance: 72,
+    grade: 'C',
+    status: 'Inactive',
+    subjects: [ 'Python', 'DBMS', 'Network Security' ]
+  }
+]
+
+Q18. Display all students sorted by aLendance from highest to lowest.
+
+myDatabase> db.StudentPerformance.aggregate([{$sort:{attendance:-1}}])
+[
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa2'),
+    student_id: 'ST107',
+    name: 'Vivaan Patel',
+    department: 'MScIT',
+    semester: 1,
+    city: 'Surat',
+    marks: 95,
+    attendance: 97,
+    grade: 'A+',
+    status: 'Active',
+    subjects: [ 'Python', 'AIML', 'Mathematics' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa7'),
+    student_id: 'ST112',
+    name: 'Kiara Desai',
+    department: 'MCA',
+    semester: 2,
+    city: 'Surat',
+    marks: 92,
+    attendance: 96,
+    grade: 'A+',
+    status: 'Active',
+    subjects: [ 'Java', 'Cloud Computing', 'Cyber Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9e'),
+    student_id: 'ST103',
+    name: 'Rohan Mehta',
+    department: 'MCA',
+    semester: 1,
+    city: 'Surat',
+    marks: 91,
+    attendance: 95,
+    grade: 'A+',
+    status: 'Active',
+    subjects: [ 'Java', 'DBMS', 'Web Technology' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa5'),
+    student_id: 'ST110',
+    name: 'Sara Mehta',
+    department: 'MCA',
+    semester: 1,
+    city: 'Rajkot',
+    marks: 89,
+    attendance: 94,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'Java', 'Web Technology', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa0'),
+    student_id: 'ST105',
+    name: 'Kabir Joshi',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Rajkot',
+    marks: 88,
+    attendance: 93,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'AIML', 'DBMS', 'Network Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9c'),
+    student_id: 'ST101',
+    name: 'Aarav Shah',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Ahmedabad',
+    marks: 82,
+    attendance: 91,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'DBMS', 'AIML', 'Network Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa3'),
+    student_id: 'ST108',
+    name: 'Isha Shah',
+    department: 'MCA',
+    semester: 2,
+    city: 'Vadodara',
+    marks: 81,
+    attendance: 90,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'Java', 'DBMS', 'Cloud Computing' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa9'),
+    student_id: 'ST114',
+    name: 'Myra Shah',
+    department: 'MCA',
+    semester: 1,
+    city: 'Ahmedabad',
+    marks: 85,
+    attendance: 89,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'Java', 'DBMS', 'Web Technology' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9d'),
+    student_id: 'ST102',
+    name: 'Diya Patel',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Vadodara',
+    marks: 76,
+    attendance: 88,
+    grade: 'B',
+    status: 'Active',
+    subjects: [ 'DBMS', 'Python', 'Cyber Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa6'),
+    student_id: 'ST111',
+    name: 'Dev Shah',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Vadodara',
+    marks: 78,
+    attendance: 86,
+    grade: 'B',
+    status: 'Active',
+    subjects: [ 'AIML', 'Python', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa1'),
+    student_id: 'ST106',
+    name: 'Meera Trivedi',
+    department: 'MCA',
+    semester: 2,
+    city: 'Ahmedabad',
+    marks: 73,
+    attendance: 85,
+    grade: 'B',
+    status: 'Active',
+    subjects: [ 'Python', 'Cloud Computing', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa8'),
+    student_id: 'ST113',
+    name: 'Yash Joshi',
+    department: 'MScIT',
+    semester: 1,
+    city: 'Rajkot',
+    marks: 71,
+    attendance: 81,
+    grade: 'B',
+    status: 'Active',
+    subjects: [ 'Python', 'Network Security', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9f'),
+    student_id: 'ST104',
+    name: 'Ananya Desai',
+    department: 'MCA',
+    semester: 1,
+    city: 'Ahmedabad',
+    marks: 68,
+    attendance: 79,
+    grade: 'C',
+    status: 'Active',
+    subjects: [ 'Java', 'Mathematics', 'Web Technology' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78faa'),
+    student_id: 'ST115',
+    name: 'Reyansh Patel',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Surat',
+    marks: 67,
+    attendance: 76,
+    grade: 'C',
+    status: 'Inactive',
+    subjects: [ 'AIML', 'Python', 'Network Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa4'),
+    student_id: 'ST109',
+    name: 'Arjun Patel',
+    department: 'MScIT',
+    semester: 1,
+    city: 'Ahmedabad',
+    marks: 64,
+    attendance: 72,
+    grade: 'C',
+    status: 'Inactive',
+    subjects: [ 'Python', 'DBMS', 'Network Security' ]
+  }
+]
+
+Q19. Sort students by department in ascending order and marks in descending order.
+
+myDatabase> db.StudentPerformance.aggregate([{$sort:{department:1,marks:-1}}])
+[
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa7'),
+    student_id: 'ST112',
+    name: 'Kiara Desai',
+    department: 'MCA',
+    semester: 2,
+    city: 'Surat',
+    marks: 92,
+    attendance: 96,
+    grade: 'A+',
+    status: 'Active',
+    subjects: [ 'Java', 'Cloud Computing', 'Cyber Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9e'),
+    student_id: 'ST103',
+    name: 'Rohan Mehta',
+    department: 'MCA',
+    semester: 1,
+    city: 'Surat',
+    marks: 91,
+    attendance: 95,
+    grade: 'A+',
+    status: 'Active',
+    subjects: [ 'Java', 'DBMS', 'Web Technology' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa5'),
+    student_id: 'ST110',
+    name: 'Sara Mehta',
+    department: 'MCA',
+    semester: 1,
+    city: 'Rajkot',
+    marks: 89,
+    attendance: 94,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'Java', 'Web Technology', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa9'),
+    student_id: 'ST114',
+    name: 'Myra Shah',
+    department: 'MCA',
+    semester: 1,
+    city: 'Ahmedabad',
+    marks: 85,
+    attendance: 89,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'Java', 'DBMS', 'Web Technology' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa3'),
+    student_id: 'ST108',
+    name: 'Isha Shah',
+    department: 'MCA',
+    semester: 2,
+    city: 'Vadodara',
+    marks: 81,
+    attendance: 90,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'Java', 'DBMS', 'Cloud Computing' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa1'),
+    student_id: 'ST106',
+    name: 'Meera Trivedi',
+    department: 'MCA',
+    semester: 2,
+    city: 'Ahmedabad',
+    marks: 73,
+    attendance: 85,
+    grade: 'B',
+    status: 'Active',
+    subjects: [ 'Python', 'Cloud Computing', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9f'),
+    student_id: 'ST104',
+    name: 'Ananya Desai',
+    department: 'MCA',
+    semester: 1,
+    city: 'Ahmedabad',
+    marks: 68,
+    attendance: 79,
+    grade: 'C',
+    status: 'Active',
+    subjects: [ 'Java', 'Mathematics', 'Web Technology' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa2'),
+    student_id: 'ST107',
+    name: 'Vivaan Patel',
+    department: 'MScIT',
+    semester: 1,
+    city: 'Surat',
+    marks: 95,
+    attendance: 97,
+    grade: 'A+',
+    status: 'Active',
+    subjects: [ 'Python', 'AIML', 'Mathematics' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa0'),
+    student_id: 'ST105',
+    name: 'Kabir Joshi',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Rajkot',
+    marks: 88,
+    attendance: 93,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'AIML', 'DBMS', 'Network Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9c'),
+    student_id: 'ST101',
+    name: 'Aarav Shah',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Ahmedabad',
+    marks: 82,
+    attendance: 91,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'DBMS', 'AIML', 'Network Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa6'),
+    student_id: 'ST111',
+    name: 'Dev Shah',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Vadodara',
+    marks: 78,
+    attendance: 86,
+    grade: 'B',
+    status: 'Active',
+    subjects: [ 'AIML', 'Python', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9d'),
+    student_id: 'ST102',
+    name: 'Diya Patel',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Vadodara',
+    marks: 76,
+    attendance: 88,
+    grade: 'B',
+    status: 'Active',
+    subjects: [ 'DBMS', 'Python', 'Cyber Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa8'),
+    student_id: 'ST113',
+    name: 'Yash Joshi',
+    department: 'MScIT',
+    semester: 1,
+    city: 'Rajkot',
+    marks: 71,
+    attendance: 81,
+    grade: 'B',
+    status: 'Active',
+    subjects: [ 'Python', 'Network Security', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78faa'),
+    student_id: 'ST115',
+    name: 'Reyansh Patel',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Surat',
+    marks: 67,
+    attendance: 76,
+    grade: 'C',
+    status: 'Inactive',
+    subjects: [ 'AIML', 'Python', 'Network Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa4'),
+    student_id: 'ST109',
+    name: 'Arjun Patel',
+    department: 'MScIT',
+    semester: 1,
+    city: 'Ahmedabad',
+    marks: 64,
+    attendance: 72,
+    grade: 'C',
+    status: 'Inactive',
+    subjects: [ 'Python', 'DBMS', 'Network Security' ]
+  }
+]
+
+Q20. Skip the first 5 documents and display the remaining students.
+
+myDatabase> db.StudentPerformance.aggregate([{$skip:5}])
+[
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa1'),
+    student_id: 'ST106',
+    name: 'Meera Trivedi',
+    department: 'MCA',
+    semester: 2,
+    city: 'Ahmedabad',
+    marks: 73,
+    attendance: 85,
+    grade: 'B',
+    status: 'Active',
+    subjects: [ 'Python', 'Cloud Computing', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa2'),
+    student_id: 'ST107',
+    name: 'Vivaan Patel',
+    department: 'MScIT',
+    semester: 1,
+    city: 'Surat',
+    marks: 95,
+    attendance: 97,
+    grade: 'A+',
+    status: 'Active',
+    subjects: [ 'Python', 'AIML', 'Mathematics' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa3'),
+    student_id: 'ST108',
+    name: 'Isha Shah',
+    department: 'MCA',
+    semester: 2,
+    city: 'Vadodara',
+    marks: 81,
+    attendance: 90,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'Java', 'DBMS', 'Cloud Computing' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa4'),
+    student_id: 'ST109',
+    name: 'Arjun Patel',
+    department: 'MScIT',
+    semester: 1,
+    city: 'Ahmedabad',
+    marks: 64,
+    attendance: 72,
+    grade: 'C',
+    status: 'Inactive',
+    subjects: [ 'Python', 'DBMS', 'Network Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa5'),
+    student_id: 'ST110',
+    name: 'Sara Mehta',
+    department: 'MCA',
+    semester: 1,
+    city: 'Rajkot',
+    marks: 89,
+    attendance: 94,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'Java', 'Web Technology', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa6'),
+    student_id: 'ST111',
+    name: 'Dev Shah',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Vadodara',
+    marks: 78,
+    attendance: 86,
+    grade: 'B',
+    status: 'Active',
+    subjects: [ 'AIML', 'Python', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa7'),
+    student_id: 'ST112',
+    name: 'Kiara Desai',
+    department: 'MCA',
+    semester: 2,
+    city: 'Surat',
+    marks: 92,
+    attendance: 96,
+    grade: 'A+',
+    status: 'Active',
+    subjects: [ 'Java', 'Cloud Computing', 'Cyber Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa8'),
+    student_id: 'ST113',
+    name: 'Yash Joshi',
+    department: 'MScIT',
+    semester: 1,
+    city: 'Rajkot',
+    marks: 71,
+    attendance: 81,
+    grade: 'B',
+    status: 'Active',
+    subjects: [ 'Python', 'Network Security', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa9'),
+    student_id: 'ST114',
+    name: 'Myra Shah',
+    department: 'MCA',
+    semester: 1,
+    city: 'Ahmedabad',
+    marks: 85,
+    attendance: 89,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'Java', 'DBMS', 'Web Technology' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78faa'),
+    student_id: 'ST115',
+    name: 'Reyansh Patel',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Surat',
+    marks: 67,
+    attendance: 76,
+    grade: 'C',
+    status: 'Inactive',
+    subjects: [ 'AIML', 'Python', 'Network Security' ]
+  }
+]
+
+Q21. Sort students by marks in descending order, skip the top 3 students, and display the
+remaining students.
+
+myDatabase> db.StudentPerformance.aggregate([{$sort:{marks:-1}},{$skip:3}])
+[
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa5'),
+    student_id: 'ST110',
+    name: 'Sara Mehta',
+    department: 'MCA',
+    semester: 1,
+    city: 'Rajkot',
+    marks: 89,
+    attendance: 94,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'Java', 'Web Technology', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa0'),
+    student_id: 'ST105',
+    name: 'Kabir Joshi',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Rajkot',
+    marks: 88,
+    attendance: 93,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'AIML', 'DBMS', 'Network Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa9'),
+    student_id: 'ST114',
+    name: 'Myra Shah',
+    department: 'MCA',
+    semester: 1,
+    city: 'Ahmedabad',
+    marks: 85,
+    attendance: 89,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'Java', 'DBMS', 'Web Technology' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9c'),
+    student_id: 'ST101',
+    name: 'Aarav Shah',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Ahmedabad',
+    marks: 82,
+    attendance: 91,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'DBMS', 'AIML', 'Network Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa3'),
+    student_id: 'ST108',
+    name: 'Isha Shah',
+    department: 'MCA',
+    semester: 2,
+    city: 'Vadodara',
+    marks: 81,
+    attendance: 90,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'Java', 'DBMS', 'Cloud Computing' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa6'),
+    student_id: 'ST111',
+    name: 'Dev Shah',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Vadodara',
+    marks: 78,
+    attendance: 86,
+    grade: 'B',
+    status: 'Active',
+    subjects: [ 'AIML', 'Python', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9d'),
+    student_id: 'ST102',
+    name: 'Diya Patel',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Vadodara',
+    marks: 76,
+    attendance: 88,
+    grade: 'B',
+    status: 'Active',
+    subjects: [ 'DBMS', 'Python', 'Cyber Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa1'),
+    student_id: 'ST106',
+    name: 'Meera Trivedi',
+    department: 'MCA',
+    semester: 2,
+    city: 'Ahmedabad',
+    marks: 73,
+    attendance: 85,
+    grade: 'B',
+    status: 'Active',
+    subjects: [ 'Python', 'Cloud Computing', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa8'),
+    student_id: 'ST113',
+    name: 'Yash Joshi',
+    department: 'MScIT',
+    semester: 1,
+    city: 'Rajkot',
+    marks: 71,
+    attendance: 81,
+    grade: 'B',
+    status: 'Active',
+    subjects: [ 'Python', 'Network Security', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9f'),
+    student_id: 'ST104',
+    name: 'Ananya Desai',
+    department: 'MCA',
+    semester: 1,
+    city: 'Ahmedabad',
+    marks: 68,
+    attendance: 79,
+    grade: 'C',
+    status: 'Active',
+    subjects: [ 'Java', 'Mathematics', 'Web Technology' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78faa'),
+    student_id: 'ST115',
+    name: 'Reyansh Patel',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Surat',
+    marks: 67,
+    attendance: 76,
+    grade: 'C',
+    status: 'Inactive',
+    subjects: [ 'AIML', 'Python', 'Network Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa4'),
+    student_id: 'ST109',
+    name: 'Arjun Patel',
+    department: 'MScIT',
+    semester: 1,
+    city: 'Ahmedabad',
+    marks: 64,
+    attendance: 72,
+    grade: 'C',
+    status: 'Inactive',
+    subjects: [ 'Python', 'DBMS', 'Network Security' ]
+  }
+]
+
+Q22. Sort students by marks in ascending order and skip the first 5 students.
+
+myDatabase> db.StudentPerformance.aggregate([{$sort:{marks:1}},{$skip:5}])
+[
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9d'),
+    student_id: 'ST102',
+    name: 'Diya Patel',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Vadodara',
+    marks: 76,
+    attendance: 88,
+    grade: 'B',
+    status: 'Active',
+    subjects: [ 'DBMS', 'Python', 'Cyber Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa6'),
+    student_id: 'ST111',
+    name: 'Dev Shah',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Vadodara',
+    marks: 78,
+    attendance: 86,
+    grade: 'B',
+    status: 'Active',
+    subjects: [ 'AIML', 'Python', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa3'),
+    student_id: 'ST108',
+    name: 'Isha Shah',
+    department: 'MCA',
+    semester: 2,
+    city: 'Vadodara',
+    marks: 81,
+    attendance: 90,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'Java', 'DBMS', 'Cloud Computing' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9c'),
+    student_id: 'ST101',
+    name: 'Aarav Shah',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Ahmedabad',
+    marks: 82,
+    attendance: 91,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'DBMS', 'AIML', 'Network Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa9'),
+    student_id: 'ST114',
+    name: 'Myra Shah',
+    department: 'MCA',
+    semester: 1,
+    city: 'Ahmedabad',
+    marks: 85,
+    attendance: 89,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'Java', 'DBMS', 'Web Technology' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa0'),
+    student_id: 'ST105',
+    name: 'Kabir Joshi',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Rajkot',
+    marks: 88,
+    attendance: 93,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'AIML', 'DBMS', 'Network Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa5'),
+    student_id: 'ST110',
+    name: 'Sara Mehta',
+    department: 'MCA',
+    semester: 1,
+    city: 'Rajkot',
+    marks: 89,
+    attendance: 94,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'Java', 'Web Technology', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9e'),
+    student_id: 'ST103',
+    name: 'Rohan Mehta',
+    department: 'MCA',
+    semester: 1,
+    city: 'Surat',
+    marks: 91,
+    attendance: 95,
+    grade: 'A+',
+    status: 'Active',
+    subjects: [ 'Java', 'DBMS', 'Web Technology' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa7'),
+    student_id: 'ST112',
+    name: 'Kiara Desai',
+    department: 'MCA',
+    semester: 2,
+    city: 'Surat',
+    marks: 92,
+    attendance: 96,
+    grade: 'A+',
+    status: 'Active',
+    subjects: [ 'Java', 'Cloud Computing', 'Cyber Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa2'),
+    student_id: 'ST107',
+    name: 'Vivaan Patel',
+    department: 'MScIT',
+    semester: 1,
+    city: 'Surat',
+    marks: 95,
+    attendance: 97,
+    grade: 'A+',
+    status: 'Active',
+    subjects: [ 'Python', 'AIML', 'Mathematics' ]
+  }
+]
+
+Q23. Display only the first 5 students.
+
+myDatabase> db.StudentPerformance.aggregate([{$limit:5}])
+[
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9c'),
+    student_id: 'ST101',
+    name: 'Aarav Shah',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Ahmedabad',
+    marks: 82,
+    attendance: 91,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'DBMS', 'AIML', 'Network Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9d'),
+    student_id: 'ST102',
+    name: 'Diya Patel',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Vadodara',
+    marks: 76,
+    attendance: 88,
+    grade: 'B',
+    status: 'Active',
+    subjects: [ 'DBMS', 'Python', 'Cyber Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9e'),
+    student_id: 'ST103',
+    name: 'Rohan Mehta',
+    department: 'MCA',
+    semester: 1,
+    city: 'Surat',
+    marks: 91,
+    attendance: 95,
+    grade: 'A+',
+    status: 'Active',
+    subjects: [ 'Java', 'DBMS', 'Web Technology' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9f'),
+    student_id: 'ST104',
+    name: 'Ananya Desai',
+    department: 'MCA',
+    semester: 1,
+    city: 'Ahmedabad',
+    marks: 68,
+    attendance: 79,
+    grade: 'C',
+    status: 'Active',
+    subjects: [ 'Java', 'Mathematics', 'Web Technology' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa0'),
+    student_id: 'ST105',
+    name: 'Kabir Joshi',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Rajkot',
+    marks: 88,
+    attendance: 93,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'AIML', 'DBMS', 'Network Security' ]
+  }
+]
+
+Q24. Display the top 3 students based on marks.
+
+
+myDatabase> db.StudentPerformance.aggregate([{$sort:{marks:-1}},{$limit:3}])
+[
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa2'),
+    student_id: 'ST107',
+    name: 'Vivaan Patel',
+    department: 'MScIT',
+    semester: 1,
+    city: 'Surat',
+    marks: 95,
+    attendance: 97,
+    grade: 'A+',
+    status: 'Active',
+    subjects: [ 'Python', 'AIML', 'Mathematics' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa7'),
+    student_id: 'ST112',
+    name: 'Kiara Desai',
+    department: 'MCA',
+    semester: 2,
+    city: 'Surat',
+    marks: 92,
+    attendance: 96,
+    grade: 'A+',
+    status: 'Active',
+    subjects: [ 'Java', 'Cloud Computing', 'Cyber Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9e'),
+    student_id: 'ST103',
+    name: 'Rohan Mehta',
+    department: 'MCA',
+    semester: 1,
+    city: 'Surat',
+    marks: 91,
+    attendance: 95,
+    grade: 'A+',
+    status: 'Active',
+    subjects: [ 'Java', 'DBMS', 'Web Technology' ]
+  }
+]
+
+Q25. Display the top 5 students based on aLendance.
+
+myDatabase> db.StudentPerformance.aggregate([{$sort:{attendance:-1}},{$limit:5}])
+[
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa2'),
+    student_id: 'ST107',
+    name: 'Vivaan Patel',
+    department: 'MScIT',
+    semester: 1,
+    city: 'Surat',
+    marks: 95,
+    attendance: 97,
+    grade: 'A+',
+    status: 'Active',
+    subjects: [ 'Python', 'AIML', 'Mathematics' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa7'),
+    student_id: 'ST112',
+    name: 'Kiara Desai',
+    department: 'MCA',
+    semester: 2,
+    city: 'Surat',
+    marks: 92,
+    attendance: 96,
+    grade: 'A+',
+    status: 'Active',
+    subjects: [ 'Java', 'Cloud Computing', 'Cyber Security' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78f9e'),
+    student_id: 'ST103',
+    name: 'Rohan Mehta',
+    department: 'MCA',
+    semester: 1,
+    city: 'Surat',
+    marks: 91,
+    attendance: 95,
+    grade: 'A+',
+    status: 'Active',
+    subjects: [ 'Java', 'DBMS', 'Web Technology' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa5'),
+    student_id: 'ST110',
+    name: 'Sara Mehta',
+    department: 'MCA',
+    semester: 1,
+    city: 'Rajkot',
+    marks: 89,
+    attendance: 94,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'Java', 'Web Technology', 'DBMS' ]
+  },
+  {
+    _id: ObjectId('6ac7ad159987914191b78fa0'),
+    student_id: 'ST105',
+    name: 'Kabir Joshi',
+    department: 'MScIT',
+    semester: 2,
+    city: 'Rajkot',
+    marks: 88,
+    attendance: 93,
+    grade: 'A',
+    status: 'Active',
+    subjects: [ 'AIML', 'DBMS', 'Network Security' ]
+  }
+]
+myDatabase>
